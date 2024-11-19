@@ -1,0 +1,88 @@
+{
+  "_index": "wazuh-alerts-4.x-2024.09.27",
+  "_id": "tjQAMZIB3ydFtSlh6Nmn",
+  "_score": 1,
+  "_source": {
+    "agent": {
+      "ip": "192.168.11.5",
+      "name": "wa_ubuntu",
+      "id": "001"
+    },
+    "previous_output": "192.168.83.148 - - [27/Sep/2024:08:03:12 +0700] \"GET /users/?id=SELECT+*+FROM+users HTTP/1.1\" 404 435 \"-\" \"curl/8.5.0\"\n192.168.83.148 - - [27/Sep/2024:08:03:12 +0700] \"GET /users/?id=SELECT+*+FROM+users HTTP/1.1\" 404 435 \"-\" \"curl/8.5.0\"\n192.168.83.148 - - [27/Sep/2024:08:03:11 +0700] \"GET /users/?id=SELECT+*+FROM+users HTTP/1.1\" 404 435 \"-\" \"curl/8.5.0\"\n192.168.83.148 - - [27/Sep/2024:08:03:11 +0700] \"GET /users/?id=SELECT+*+FROM+users HTTP/1.1\" 404 435 \"-\" \"curl/8.5.0\"\n192.168.83.148 - - [27/Sep/2024:08:03:11 +0700] \"GET /users/?id=SELECT+*+FROM+users HTTP/1.1\" 404 435 \"-\" \"curl/8.5.0\"\n192.168.83.148 - - [27/Sep/2024:08:03:10 +0700] \"GET /users/?id=SELECT+*+FROM+users HTTP/1.1\" 404 435 \"-\" \"curl/8.5.0\"\n192.168.83.148 - - [27/Sep/2024:08:03:09 +0700] \"GET /users/?id=SELECT+*+FROM+users HTTP/1.1\" 404 435 \"-\" \"curl/8.5.0\"",
+    "manager": {
+      "name": "ubuntu"
+    },
+    "data": {
+      "protocol": "GET",
+      "srcip": "192.168.83.148",
+      "id": "404",
+      "url": "/users/?id=SELECT+*+FROM+users"
+    },
+    "rule": {
+      "firedtimes": 1,
+      "mail": false,
+      "level": 10,
+      "pci_dss": [
+        "6.5",
+        "11.4",
+        "6.5.1"
+      ],
+      "tsc": [
+        "CC6.6",
+        "CC7.1",
+        "CC8.1",
+        "CC6.1",
+        "CC6.8",
+        "CC7.2",
+        "CC7.3"
+      ],
+      "description": "Multiple SQL injection attempts from same source ip.",
+      "groups": [
+        "web",
+        "accesslog",
+        "attack",
+        "sql_injection"
+      ],
+      "mitre": {
+        "technique": [
+          "Process Injection"
+        ],
+        "id": [
+          "T1055"
+        ],
+        "tactic": [
+          "Defense Evasion",
+          "Privilege Escalation"
+        ]
+      },
+      "id": "31152",
+      "nist_800_53": [
+        "SA.11",
+        "SI.4"
+      ],
+      "frequency": 8,
+      "gdpr": [
+        "IV_35.7.d"
+      ]
+    },
+    "decoder": {
+      "name": "web-accesslog"
+    },
+    "full_log": "192.168.83.148 - - [27/Sep/2024:08:03:13 +0700] \"GET /users/?id=SELECT+*+FROM+users HTTP/1.1\" 404 435 \"-\" \"curl/8.5.0\"",
+    "input": {
+      "type": "log"
+    },
+    "@timestamp": "2024-09-27T01:03:14.363Z",
+    "location": "/var/log/apache2/access.log",
+    "id": "1727398994.5470839",
+    "timestamp": "2024-09-27T08:03:14.363+0700"
+  },
+  "fields": {
+    "@timestamp": [
+      "2024-09-27T01:03:14.363Z"
+    ],
+    "timestamp": [
+      "2024-09-27T01:03:14.363Z"
+    ]
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "_index": "wazuh-alerts-4.x-2024.09.26",
+  "_id": "XW58LJIBnR9KWRUyTc_q",
+  "_score": 1,
+  "_source": {
+    "predecoder": {
+      "hostname": "ubuntu",
+      "program_name": "su",
+      "timestamp": "Sep 26 03:59:53"
+    },
+    "agent": {
+      "ip": "192.168.11.5",
+      "name": "wa_ubuntu",
+      "id": "001"
+    },
+    "manager": {
+      "name": "ubuntu"
+    },
+    "data": {
+      "srcuser": "user1",
+      "uid": "1001",
+      "euid": "0",
+      "dstuser": "user2",
+      "tty": "/dev/pts/1"
+    },
+    "rule": {
+      "mail": false,
+      "level": 5,
+      "pci_dss": [
+        "10.2.4",
+        "10.2.5"
+      ],
+      "hipaa": [
+        "164.312.b"
+      ],
+      "tsc": [
+        "CC6.1",
+        "CC6.8",
+        "CC7.2",
+        "CC7.3"
+      ],
+      "description": "PAM: User login failed.",
+      "groups": [
+        "pam",
+        "syslog",
+        "authentication_failed"
+      ],
+      "nist_800_53": [
+        "AU.14",
+        "AC.7"
+      ],
+      "gdpr": [
+        "IV_35.7.d",
+        "IV_32.2"
+      ],
+      "firedtimes": 2,
+      "mitre": {
+        "technique": [
+          "Password Guessing"
+        ],
+        "id": [
+          "T1110.001"
+        ],
+        "tactic": [
+          "Credential Access"
+        ]
+      },
+      "id": "5503",
+      "gpg13": [
+        "7.8"
+      ]
+    },
+    "decoder": {
+      "name": "pam"
+    },
+    "full_log": "Sep 26 03:59:53 ubuntu su[45613]: pam_unix(su:auth): authentication failure; logname= uid=1001 euid=0 tty=/dev/pts/1 ruser=user1 rhost=  user=user2",
+    "input": {
+      "type": "log"
+    },
+    "@timestamp": "2024-09-26T03:59:54.529Z",
+    "location": "journald",
+    "id": "1727323194.200668",
+    "timestamp": "2024-09-26T10:59:54.529+0700"
+  },
+  "fields": {
+    "@timestamp": [
+      "2024-09-26T03:59:54.529Z"
+    ],
+    "timestamp": [
+      "2024-09-26T03:59:54.529Z"
+    ]
+  }
+}

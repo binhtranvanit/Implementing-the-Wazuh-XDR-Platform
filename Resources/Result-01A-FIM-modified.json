@@ -1,0 +1,202 @@
+{
+  "_index": "wazuh-alerts-4.x-2024.09.23",
+  "_id": "SHXXHJIBhsAhco6ySAZq",
+  "_score": 1,
+  "_source": {
+    "syscheck": {
+      "size_before": "0",
+      "uname_after": "user",
+      "mtime_after": "2024-09-23T10:05:20",
+      "size_after": "16",
+      "md5_before": "d41d8cd98f00b204e9800998ecf8427e",
+      "diff": "---\n> WAZUH-TEST 12345\n",
+      "win_perm_after": [
+        {
+          "allowed": [
+            "DELETE",
+            "READ_CONTROL",
+            "WRITE_DAC",
+            "WRITE_OWNER",
+            "SYNCHRONIZE",
+            "READ_DATA",
+            "WRITE_DATA",
+            "APPEND_DATA",
+            "READ_EA",
+            "WRITE_EA",
+            "EXECUTE",
+            "READ_ATTRIBUTES",
+            "WRITE_ATTRIBUTES",
+            [
+              "DELETE",
+              "READ_CONTROL",
+              "WRITE_DAC",
+              "WRITE_OWNER",
+              "SYNCHRONIZE",
+              "READ_DATA",
+              "WRITE_DATA",
+              "APPEND_DATA",
+              "READ_EA",
+              "WRITE_EA",
+              "EXECUTE",
+              "READ_ATTRIBUTES",
+              "WRITE_ATTRIBUTES"
+            ],
+            [
+              "DELETE",
+              "READ_CONTROL",
+              "WRITE_DAC",
+              "WRITE_OWNER",
+              "SYNCHRONIZE",
+              "READ_DATA",
+              "WRITE_DATA",
+              "APPEND_DATA",
+              "READ_EA",
+              "WRITE_EA",
+              "EXECUTE",
+              "READ_ATTRIBUTES",
+              "WRITE_ATTRIBUTES"
+            ]
+          ],
+          "name": "SYSTEM"
+        },
+        {
+          "allowed": [
+            "DELETE",
+            "READ_CONTROL",
+            "WRITE_DAC",
+            "WRITE_OWNER",
+            "SYNCHRONIZE",
+            "READ_DATA",
+            "WRITE_DATA",
+            "APPEND_DATA",
+            "READ_EA",
+            "WRITE_EA",
+            "EXECUTE",
+            "READ_ATTRIBUTES",
+            "WRITE_ATTRIBUTES"
+          ],
+          "name": "Administrators"
+        },
+        {
+          "allowed": [
+            "DELETE",
+            "READ_CONTROL",
+            "WRITE_DAC",
+            "WRITE_OWNER",
+            "SYNCHRONIZE",
+            "READ_DATA",
+            "WRITE_DATA",
+            "APPEND_DATA",
+            "READ_EA",
+            "WRITE_EA",
+            "EXECUTE",
+            "READ_ATTRIBUTES",
+            "WRITE_ATTRIBUTES"
+          ],
+          "name": "user"
+        }
+      ],
+      "sha256_before": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mtime_before": "2024-09-23T10:04:57",
+      "mode": "realtime",
+      "path": "c:\\users\\user\\bsoc\\test-wazuh\\wazuh-test.txt",
+      "sha1_after": "4d703210344175d907b9d5be0819d101c21b798d",
+      "changed_attributes": [
+        "size",
+        "mtime",
+        "md5",
+        "sha1",
+        "sha256"
+      ],
+      "attrs_after": [
+        "ARCHIVE"
+      ],
+      "uid_after": "S-1-5-21-4018185793-1848231848-775784978-1001",
+      "event": "modified",
+      "md5_after": "6205455d501f2ccd07c278ae2c963c83",
+      "sha1_before": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+      "sha256_after": "a6c9a195356c4e6421713660b3ec6f1d9914e5b22f99616ae7ae409a6bb82243"
+    },
+    "agent": {
+      "ip": "192.168.13.5",
+      "name": "wa_windows",
+      "id": "002"
+    },
+    "manager": {
+      "name": "ubuntu"
+    },
+    "rule": {
+      "mail": false,
+      "level": 7,
+      "pci_dss": [
+        "11.5"
+      ],
+      "hipaa": [
+        "164.312.c.1",
+        "164.312.c.2"
+      ],
+      "tsc": [
+        "PI1.4",
+        "PI1.5",
+        "CC6.1",
+        "CC6.8",
+        "CC7.2",
+        "CC7.3"
+      ],
+      "description": "Integrity checksum changed.",
+      "groups": [
+        "ossec",
+        "syscheck",
+        "syscheck_entry_modified",
+        "syscheck_file"
+      ],
+      "nist_800_53": [
+        "SI.7"
+      ],
+      "gdpr": [
+        "II_5.1.f"
+      ],
+      "firedtimes": 1,
+      "mitre": {
+        "technique": [
+          "Stored Data Manipulation"
+        ],
+        "id": [
+          "T1565.001"
+        ],
+        "tactic": [
+          "Impact"
+        ]
+      },
+      "id": "550",
+      "gpg13": [
+        "4.11"
+      ]
+    },
+    "decoder": {
+      "name": "syscheck_integrity_changed"
+    },
+    "full_log": "File 'c:\\users\\user\\bsoc\\test-wazuh\\wazuh-test.txt' modified\nMode: realtime\nChanged attributes: size,mtime,md5,sha1,sha256\nSize changed from '0' to '16'\nOld modification time was: '1727060697', now it is '1727060720'\nOld md5sum was: 'd41d8cd98f00b204e9800998ecf8427e'\nNew md5sum is : '6205455d501f2ccd07c278ae2c963c83'\nOld sha1sum was: 'da39a3ee5e6b4b0d3255bfef95601890afd80709'\nNew sha1sum is : '4d703210344175d907b9d5be0819d101c21b798d'\nOld sha256sum was: 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'\nNew sha256sum is : 'a6c9a195356c4e6421713660b3ec6f1d9914e5b22f99616ae7ae409a6bb82243'\n",
+    "input": {
+      "type": "log"
+    },
+    "@timestamp": "2024-09-23T03:05:20.333Z",
+    "location": "syscheck",
+    "id": "1727060720.552383",
+    "timestamp": "2024-09-23T10:05:20.333+0700"
+  },
+  "fields": {
+    "syscheck.mtime_after": [
+      "2024-09-23T10:05:20.000Z"
+    ],
+    "syscheck.mtime_before": [
+      "2024-09-23T10:04:57.000Z"
+    ],
+    "@timestamp": [
+      "2024-09-23T03:05:20.333Z"
+    ],
+    "timestamp": [
+      "2024-09-23T03:05:20.333Z"
+    ]
+  }
+}

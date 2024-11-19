@@ -1,0 +1,84 @@
+{
+  "_index": "wazuh-alerts-4.x-2024.09.24",
+  "_id": "4SvDIZIBv7uCojl-Jkzo",
+  "_score": 1,
+  "_source": {
+    "syscheck": {
+      "size_before": "69632",
+      "uname_after": "root",
+      "mtime_after": "2024-09-24T09:01:22",
+      "size_after": "79804",
+      "gid_after": "0",
+      "md5_before": "1c39d0aee4a81ac70db992e52218d2c1",
+      "sha256_before": "b70009940b99496fa0946d93941523ab928defd4c538d55ca7829e62603f14bc",
+      "mode": "realtime",
+      "path": "/home/ubuntu/bsoc/mirai",
+      "sha1_after": "59b55795240efec884e0981991a3ffef19f19765",
+      "changed_attributes": [
+        "size",
+        "md5",
+        "sha1",
+        "sha256"
+      ],
+      "gname_after": "root",
+      "uid_after": "0",
+      "perm_after": "rw-r--r--",
+      "event": "modified",
+      "md5_after": "e0ec2cd43f71c80d42cd7b0f17802c73",
+      "sha1_before": "0cc09ec28379ca877b7b4f4bf340a50b8fd0c92a",
+      "sha256_after": "2aa2dbae345938386d93edb02d4f3aa3ad1b130c04b04e4e5c5c0d0e4ffe3181",
+      "inode_after": 655606
+    },
+    "agent": {
+      "ip": "192.168.11.5",
+      "name": "wa_ubuntu",
+      "id": "001"
+    },
+    "manager": {
+      "name": "ubuntu"
+    },
+    "rule": {
+      "firedtimes": 1,
+      "mail": true,
+      "level": 13,
+      "description": "BSOC - File with known malware hash detected: /home/ubuntu/bsoc/mirai",
+      "groups": [
+        "malware"
+      ],
+      "mitre": {
+        "technique": [
+          "Malicious File"
+        ],
+        "id": [
+          "T1204.002"
+        ],
+        "tactic": [
+          "Execution"
+        ]
+      },
+      "id": "110002"
+    },
+    "decoder": {
+      "name": "syscheck_integrity_changed"
+    },
+    "full_log": "File '/home/ubuntu/bsoc/mirai' modified\nMode: realtime\nChanged attributes: size,md5,sha1,sha256\nSize changed from '69632' to '79804'\nOld md5sum was: '1c39d0aee4a81ac70db992e52218d2c1'\nNew md5sum is : 'e0ec2cd43f71c80d42cd7b0f17802c73'\nOld sha1sum was: '0cc09ec28379ca877b7b4f4bf340a50b8fd0c92a'\nNew sha1sum is : '59b55795240efec884e0981991a3ffef19f19765'\nOld sha256sum was: 'b70009940b99496fa0946d93941523ab928defd4c538d55ca7829e62603f14bc'\nNew sha256sum is : '2aa2dbae345938386d93edb02d4f3aa3ad1b130c04b04e4e5c5c0d0e4ffe3181'\n",
+    "input": {
+      "type": "log"
+    },
+    "@timestamp": "2024-09-24T02:01:22.497Z",
+    "location": "syscheck",
+    "id": "1727143282.23894",
+    "timestamp": "2024-09-24T09:01:22.497+0700"
+  },
+  "fields": {
+    "syscheck.mtime_after": [
+      "2024-09-24T09:01:22.000Z"
+    ],
+    "@timestamp": [
+      "2024-09-24T02:01:22.497Z"
+    ],
+    "timestamp": [
+      "2024-09-24T02:01:22.497Z"
+    ]
+  }
+}

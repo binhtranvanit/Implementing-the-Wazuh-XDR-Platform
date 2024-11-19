@@ -1,0 +1,75 @@
+{
+  "_index": "wazuh-alerts-4.x-2024.09.25",
+  "_id": "rIpnKJIB1lmgO2tnw9IP",
+  "_score": 1,
+  "_source": {
+    "agent": {
+      "ip": "192.168.11.5",
+      "name": "wa_ubuntu",
+      "id": "001"
+    },
+    "manager": {
+      "name": "ubuntu"
+    },
+    "data": {
+      "sca": {
+        "scan_id": "651049411",
+        "check": {
+          "result": "failed",
+          "remediation": "Kill the netcat process if confirmed to be malicious after further investigation.",
+          "process": [
+            "nc",
+            "netcat"
+          ],
+          "description": "Netcat is running on your endpoint.",
+          "id": "10003",
+          "title": "Ensure that netcat is not running on your endpoint",
+          "rationale": "Threat actors can use netcat to open ports on your endpoints or to connect to remote servers."
+        },
+        "type": "check",
+        "policy": "SCA use case to detect running processes"
+      }
+    },
+    "rule": {
+      "firedtimes": 1,
+      "mail": false,
+      "level": 7,
+      "pci_dss": [
+        "2.2"
+      ],
+      "tsc": [
+        "CC7.1",
+        "CC7.2"
+      ],
+      "description": "SCA use case to detect running processes: Ensure that netcat is not running on your endpoint",
+      "groups": [
+        "sca"
+      ],
+      "id": "19007",
+      "nist_800_53": [
+        "CM.1"
+      ],
+      "gdpr": [
+        "IV_35.7.d"
+      ]
+    },
+    "decoder": {
+      "name": "sca"
+    },
+    "input": {
+      "type": "log"
+    },
+    "@timestamp": "2024-09-25T08:58:59.351Z",
+    "location": "sca",
+    "id": "1727254739.96303",
+    "timestamp": "2024-09-25T15:58:59.351+0700"
+  },
+  "fields": {
+    "@timestamp": [
+      "2024-09-25T08:58:59.351Z"
+    ],
+    "timestamp": [
+      "2024-09-25T08:58:59.351Z"
+    ]
+  }
+}

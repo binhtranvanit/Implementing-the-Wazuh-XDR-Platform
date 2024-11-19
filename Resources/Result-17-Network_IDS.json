@@ -1,0 +1,88 @@
+{
+  "_index": "wazuh-alerts-4.x-2024.10.03",
+  "_id": "g8FbUJIB8gv4JXNcgGWD",
+  "_score": 1,
+  "_source": {
+    "agent": {
+      "ip": "192.168.11.5",
+      "name": "wa_ubuntu",
+      "id": "001"
+    },
+    "manager": {
+      "name": "ubuntu"
+    },
+    "data": {
+      "icmp_type": "8",
+      "in_iface": "ens33",
+      "src_ip": "192.168.12.5",
+      "src_port": "0",
+      "event_type": "alert",
+      "alert": {
+        "severity": "3",
+        "signature_id": "2100366",
+        "rev": "8",
+        "metadata": {
+          "updated_at": [
+            "2019_07_26"
+          ],
+          "created_at": [
+            "2010_09_23"
+          ]
+        },
+        "gid": "1",
+        "signature": "GPL ICMP_INFO PING *NIX",
+        "action": "allowed",
+        "category": "Misc activity"
+      },
+      "flow_id": "1893903976400221.000000",
+      "dest_ip": "192.168.11.5",
+      "proto": "ICMP",
+      "icmp_code": "0",
+      "dest_port": "0",
+      "pkt_src": "wire/pcap",
+      "flow": {
+        "src_ip": "192.168.12.5",
+        "pkts_toserver": "6",
+        "dest_ip": "192.168.11.5",
+        "start": "2024-10-03T10:10:22.572030+0700",
+        "bytes_toclient": "392",
+        "bytes_toserver": "588",
+        "pkts_toclient": "4"
+      },
+      "timestamp": "2024-10-03T10:10:24.601634+0700",
+      "direction": "to_server"
+    },
+    "rule": {
+      "firedtimes": 6,
+      "mail": false,
+      "level": 3,
+      "description": "Suricata: Alert - GPL ICMP_INFO PING *NIX",
+      "groups": [
+        "ids",
+        "suricata"
+      ],
+      "id": "86601"
+    },
+    "decoder": {
+      "name": "json"
+    },
+    "input": {
+      "type": "log"
+    },
+    "@timestamp": "2024-10-03T03:10:25.076Z",
+    "location": "/var/log/suricata/eve.json",
+    "id": "1727925025.152305",
+    "timestamp": "2024-10-03T10:10:25.076+0700"
+  },
+  "fields": {
+    "@timestamp": [
+      "2024-10-03T03:10:25.076Z"
+    ],
+    "data.timestamp": [
+      "2024-10-03T03:10:24.601Z"
+    ],
+    "timestamp": [
+      "2024-10-03T03:10:25.076Z"
+    ]
+  }
+}

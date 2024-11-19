@@ -1,0 +1,154 @@
+{
+  "_index": "wazuh-alerts-4.x-2024.09.27",
+  "_id": "ZTTeMJIB3ydFtSlhUNmv",
+  "_score": null,
+  "_source": {
+    "input": {
+      "type": "log"
+    },
+    "agent": {
+      "ip": "192.168.11.5",
+      "name": "wa_ubuntu",
+      "id": "001"
+    },
+    "manager": {
+      "name": "ubuntu"
+    },
+    "data": {
+      "srcip": "192.168.83.148",
+      "dstuser": "ubuntu",
+      "origin": {
+        "module": "wazuh-execd",
+        "name": "node01"
+      },
+      "version": "1",
+      "parameters": {
+        "alert": {
+          "predecoder": {
+            "hostname": "ubuntu",
+            "program_name": "sshd",
+            "timestamp": "Sep 27 00:23:48"
+          },
+          "agent": {
+            "ip": "192.168.11.5",
+            "name": "wa_ubuntu",
+            "id": "001"
+          },
+          "previous_output": "Sep 27 00:23:48 ubuntu sshd[4685]: Failed password for ubuntu from 192.168.83.148 port 33596 ssh2\nSep 27 00:23:48 ubuntu sshd[4684]: Failed password for ubuntu from 192.168.83.148 port 33576 ssh2\nSep 27 00:23:48 ubuntu sshd[4683]: Failed password for ubuntu from 192.168.83.148 port 33578 ssh2\nSep 27 00:23:45 ubuntu sshd[4684]: Failed password for ubuntu from 192.168.83.148 port 33576 ssh2\nSep 27 00:23:45 ubuntu sshd[4686]: Failed password for ubuntu from 192.168.83.148 port 33612 ssh2\nSep 27 00:23:45 ubuntu sshd[4685]: Failed password for ubuntu from 192.168.83.148 port 33596 ssh2\nSep 27 00:23:45 ubuntu sshd[4683]: Failed password for ubuntu from 192.168.83.148 port 33578 ssh2",
+          "manager": {
+            "name": "ubuntu"
+          },
+          "data": {
+            "srcip": "192.168.83.148",
+            "dstuser": "ubuntu",
+            "srcport": "33612"
+          },
+          "rule": {
+            "mail": "false",
+            "level": "10",
+            "hipaa": [
+              "164.312.b"
+            ],
+            "pci_dss": [
+              "11.4",
+              "10.2.4",
+              "10.2.5"
+            ],
+            "tsc": [
+              "CC6.1",
+              "CC6.8",
+              "CC7.2",
+              "CC7.3"
+            ],
+            "description": "sshd: brute force trying to get access to the system. Authentication failed.",
+            "groups": [
+              "syslog",
+              "sshd",
+              "authentication_failures"
+            ],
+            "nist_800_53": [
+              "SI.4",
+              "AU.14",
+              "AC.7"
+            ],
+            "frequency": "8",
+            "gdpr": [
+              "IV_35.7.d",
+              "IV_32.2"
+            ],
+            "firedtimes": "1",
+            "mitre": {
+              "technique": [
+                "Brute Force"
+              ],
+              "id": [
+                "T1110"
+              ],
+              "tactic": [
+                "Credential Access"
+              ]
+            },
+            "id": "5763"
+          },
+          "location": "journald",
+          "id": "1727396629.5425785",
+          "decoder": {
+            "parent": "sshd",
+            "name": "sshd"
+          },
+          "timestamp": "2024-09-27T07:23:49.810+0700",
+          "full_log": "Sep 27 00:23:48 ubuntu sshd[4686]: Failed password for ubuntu from 192.168.83.148 port 33612 ssh2"
+        },
+        "extra_args": [],
+        "program": "active-response/bin/firewall-drop"
+      },
+      "command": "delete"
+    },
+    "rule": {
+      "firedtimes": 1,
+      "mail": false,
+      "level": 3,
+      "pci_dss": [
+        "11.4"
+      ],
+      "tsc": [
+        "CC6.1",
+        "CC6.8",
+        "CC7.2",
+        "CC7.3",
+        "CC7.4"
+      ],
+      "description": "Host Unblocked by firewall-drop Active Response",
+      "groups": [
+        "ossec",
+        "active_response"
+      ],
+      "id": "652",
+      "nist_800_53": [
+        "SI.4"
+      ],
+      "gpg13": [
+        "4.13"
+      ],
+      "gdpr": [
+        "IV_35.7.d"
+      ]
+    },
+    "location": "/var/ossec/logs/active-responses.log",
+    "decoder": {
+      "parent": "ar_log_json",
+      "name": "ar_log_json"
+    },
+    "id": "1727396721.5436134",
+    "full_log": "2024/09/27 07:25:20 active-response/bin/firewall-drop: {\"version\":1,\"origin\":{\"name\":\"node01\",\"module\":\"wazuh-execd\"},\"command\":\"delete\",\"parameters\":{\"extra_args\":[],\"alert\":{\"timestamp\":\"2024-09-27T07:23:49.810+0700\",\"rule\":{\"level\":10,\"description\":\"sshd: brute force trying to get access to the system. Authentication failed.\",\"id\":\"5763\",\"mitre\":{\"id\":[\"T1110\"],\"tactic\":[\"Credential Access\"],\"technique\":[\"Brute Force\"]},\"frequency\":8,\"firedtimes\":1,\"mail\":false,\"groups\":[\"syslog\",\"sshd\",\"authentication_failures\"],\"gdpr\":[\"IV_35.7.d\",\"IV_32.2\"],\"hipaa\":[\"164.312.b\"],\"nist_800_53\":[\"SI.4\",\"AU.14\",\"AC.7\"],\"pci_dss\":[\"11.4\",\"10.2.4\",\"10.2.5\"],\"tsc\":[\"CC6.1\",\"CC6.8\",\"CC7.2\",\"CC7.3\"]},\"agent\":{\"id\":\"001\",\"name\":\"wa_ubuntu\",\"ip\":\"192.168.11.5\"},\"manager\":{\"name\":\"ubuntu\"},\"id\":\"1727396629.5425785\",\"previous_output\":\"Sep 27 00:23:48 ubuntu sshd[4685]: Failed password for ubuntu from 192.168.83.148 port 33596 ssh2\\nSep 27 00:23:48 ubuntu sshd[4684]: Failed password for ubuntu from 192.168.83.148 port 33576 ssh2\\nSep 27 00:23:48 ubuntu sshd[4683]: Failed password for ubuntu from 192.168.83.148 port 33578 ssh2\\nSep 27 00:23:45 ubuntu sshd[4684]: Failed password for ubuntu from 192.168.83.148 port 33576 ssh2\\nSep 27 00:23:45 ubuntu sshd[4686]: Failed password for ubuntu from 192.168.83.148 port 33612 ssh2\\nSep 27 00:23:45 ubuntu sshd[4685]: Failed password for ubuntu from 192.168.83.148 port 33596 ssh2\\nSep 27 00:23:45 ubuntu sshd[4683]: Failed password for ubuntu from 192.168.83.148 port 33578 ssh2\",\"full_log\":\"Sep 27 00:23:48 ubuntu sshd[4686]: Failed password for ubuntu from 192.168.83.148 port 33612 ssh2\",\"predecoder\":{\"program_name\":\"sshd\",\"timestamp\":\"Sep 27 00:23:48\",\"hostname\":\"ubuntu\"},\"decoder\":{\"parent\":\"sshd\",\"name\":\"sshd\"},\"data\":{\"srcip\":\"192.168.83.148\",\"srcport\":\"33612\",\"dstuser\":\"ubuntu\"},\"location\":\"journald\"},\"program\":\"active-response/bin/firewall-drop\"}}",
+    "timestamp": "2024-09-27T07:25:21.819+0700"
+  },
+  "fields": {
+    "timestamp": [
+      "2024-09-27T00:25:21.819Z"
+    ]
+  },
+  "sort": [
+    1727396721819
+  ]
+}

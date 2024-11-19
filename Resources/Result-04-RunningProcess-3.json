@@ -1,0 +1,71 @@
+{
+  "_index": "wazuh-alerts-4.x-2024.09.25",
+  "_id": "ropoKJIB1lmgO2tnGdIE",
+  "_score": 1,
+  "_source": {
+    "agent": {
+      "ip": "192.168.11.5",
+      "name": "wa_ubuntu",
+      "id": "001"
+    },
+    "manager": {
+      "name": "ubuntu"
+    },
+    "data": {
+      "sca": {
+        "score": "0",
+        "total_checks": "1",
+        "file": "processcheck.yml",
+        "policy_id": "process_check",
+        "invalid": "0",
+        "description": "Guidance for checking running processes on Linux endpoints.",
+        "scan_id": "651049411",
+        "passed": "0",
+        "failed": "1",
+        "type": "summary",
+        "policy": "SCA use case to detect running processes"
+      }
+    },
+    "rule": {
+      "firedtimes": 2,
+      "mail": false,
+      "level": 9,
+      "pci_dss": [
+        "2.2"
+      ],
+      "tsc": [
+        "CC7.1",
+        "CC7.2"
+      ],
+      "description": "SCA summary: SCA use case to detect running processes: Score less than 30% (0)",
+      "groups": [
+        "sca"
+      ],
+      "id": "19005",
+      "nist_800_53": [
+        "CM.1"
+      ],
+      "gdpr": [
+        "IV_35.7.d"
+      ]
+    },
+    "decoder": {
+      "name": "sca"
+    },
+    "input": {
+      "type": "log"
+    },
+    "@timestamp": "2024-09-25T08:59:15.427Z",
+    "location": "sca",
+    "id": "1727254755.98900",
+    "timestamp": "2024-09-25T15:59:15.427+0700"
+  },
+  "fields": {
+    "@timestamp": [
+      "2024-09-25T08:59:15.427Z"
+    ],
+    "timestamp": [
+      "2024-09-25T08:59:15.427Z"
+    ]
+  }
+}

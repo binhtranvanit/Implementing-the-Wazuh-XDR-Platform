@@ -1,0 +1,189 @@
+{
+  "_index": "wazuh-alerts-4.x-2024.09.23",
+  "_id": "SnXZHJIBhsAhco6ykgZ5",
+  "_score": 1,
+  "_source": {
+    "syscheck": {
+      "mode": "realtime",
+      "path": "c:\\users\\user\\bsoc\\test-wazuh\\wazuh-test.txt",
+      "sha1_after": "4d703210344175d907b9d5be0819d101c21b798d",
+      "uname_after": "user",
+      "mtime_after": "2024-09-23T10:05:20",
+      "attrs_after": [
+        "ARCHIVE"
+      ],
+      "size_after": "16",
+      "uid_after": "S-1-5-21-4018185793-1848231848-775784978-1001",
+      "win_perm_after": [
+        {
+          "allowed": [
+            "DELETE",
+            "READ_CONTROL",
+            "WRITE_DAC",
+            "WRITE_OWNER",
+            "SYNCHRONIZE",
+            "READ_DATA",
+            "WRITE_DATA",
+            "APPEND_DATA",
+            "READ_EA",
+            "WRITE_EA",
+            "EXECUTE",
+            "READ_ATTRIBUTES",
+            "WRITE_ATTRIBUTES",
+            [
+              "DELETE",
+              "READ_CONTROL",
+              "WRITE_DAC",
+              "WRITE_OWNER",
+              "SYNCHRONIZE",
+              "READ_DATA",
+              "WRITE_DATA",
+              "APPEND_DATA",
+              "READ_EA",
+              "WRITE_EA",
+              "EXECUTE",
+              "READ_ATTRIBUTES",
+              "WRITE_ATTRIBUTES"
+            ],
+            [
+              "DELETE",
+              "READ_CONTROL",
+              "WRITE_DAC",
+              "WRITE_OWNER",
+              "SYNCHRONIZE",
+              "READ_DATA",
+              "WRITE_DATA",
+              "APPEND_DATA",
+              "READ_EA",
+              "WRITE_EA",
+              "EXECUTE",
+              "READ_ATTRIBUTES",
+              "WRITE_ATTRIBUTES"
+            ]
+          ],
+          "name": "SYSTEM"
+        },
+        {
+          "allowed": [
+            "DELETE",
+            "READ_CONTROL",
+            "WRITE_DAC",
+            "WRITE_OWNER",
+            "SYNCHRONIZE",
+            "READ_DATA",
+            "WRITE_DATA",
+            "APPEND_DATA",
+            "READ_EA",
+            "WRITE_EA",
+            "EXECUTE",
+            "READ_ATTRIBUTES",
+            "WRITE_ATTRIBUTES"
+          ],
+          "name": "Administrators"
+        },
+        {
+          "allowed": [
+            "DELETE",
+            "READ_CONTROL",
+            "WRITE_DAC",
+            "WRITE_OWNER",
+            "SYNCHRONIZE",
+            "READ_DATA",
+            "WRITE_DATA",
+            "APPEND_DATA",
+            "READ_EA",
+            "WRITE_EA",
+            "EXECUTE",
+            "READ_ATTRIBUTES",
+            "WRITE_ATTRIBUTES"
+          ],
+          "name": "user"
+        }
+      ],
+      "event": "deleted",
+      "md5_after": "6205455d501f2ccd07c278ae2c963c83",
+      "sha256_after": "a6c9a195356c4e6421713660b3ec6f1d9914e5b22f99616ae7ae409a6bb82243"
+    },
+    "agent": {
+      "ip": "192.168.13.5",
+      "name": "wa_windows",
+      "id": "002"
+    },
+    "manager": {
+      "name": "ubuntu"
+    },
+    "rule": {
+      "mail": false,
+      "level": 7,
+      "pci_dss": [
+        "11.5"
+      ],
+      "hipaa": [
+        "164.312.c.1",
+        "164.312.c.2"
+      ],
+      "tsc": [
+        "PI1.4",
+        "PI1.5",
+        "CC6.1",
+        "CC6.8",
+        "CC7.2",
+        "CC7.3"
+      ],
+      "description": "File deleted.",
+      "groups": [
+        "ossec",
+        "syscheck",
+        "syscheck_entry_deleted",
+        "syscheck_file"
+      ],
+      "nist_800_53": [
+        "SI.7"
+      ],
+      "gdpr": [
+        "II_5.1.f"
+      ],
+      "firedtimes": 3,
+      "mitre": {
+        "technique": [
+          "File Deletion",
+          "Data Destruction"
+        ],
+        "id": [
+          "T1070.004",
+          "T1485"
+        ],
+        "tactic": [
+          "Defense Evasion",
+          "Impact"
+        ]
+      },
+      "id": "553",
+      "gpg13": [
+        "4.11"
+      ]
+    },
+    "decoder": {
+      "name": "syscheck_deleted"
+    },
+    "full_log": "File 'c:\\users\\user\\bsoc\\test-wazuh\\wazuh-test.txt' deleted\nMode: realtime\n",
+    "input": {
+      "type": "log"
+    },
+    "@timestamp": "2024-09-23T03:07:43.870Z",
+    "location": "syscheck",
+    "id": "1727060863.555798",
+    "timestamp": "2024-09-23T10:07:43.870+0700"
+  },
+  "fields": {
+    "syscheck.mtime_after": [
+      "2024-09-23T10:05:20.000Z"
+    ],
+    "@timestamp": [
+      "2024-09-23T03:07:43.870Z"
+    ],
+    "timestamp": [
+      "2024-09-23T03:07:43.870Z"
+    ]
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "_index": "wazuh-alerts-4.x-2024.10.07",
+  "_id": "AS3GdJIBmwfE9Z5X8CEh",
+  "_score": 1,
+  "_source": {
+    "agent": {
+      "ip": "192.168.13.5",
+      "name": "wa_windows",
+      "id": "002"
+    },
+    "manager": {
+      "name": "ubuntu"
+    },
+    "data": {
+      "win": {
+        "eventdata": {
+          "data": "Dr. Memory, 2.6.0, 1033, 0, Google",
+          "binary": "7B36373637354144362D314642302D344445312D394543462D3834393937353135303235457D3030303063366334386334663063386264623465653262623562303132656333623331383030303030393034"
+        },
+        "system": {
+          "eventID": "1033",
+          "keywords": "0x80000000000000",
+          "level": "4",
+          "channel": "Application",
+          "opcode": "0",
+          "message": "\"Windows Installer installed the product. Product Name: Dr. Memory. Product Version: 2.6.0. Product Language: 1033. Manufacturer: Google. Installation success or error status: 0.\"",
+          "version": "0",
+          "systemTime": "2024-10-07T02:56:49.1742942Z",
+          "eventRecordID": "1842",
+          "threadID": "0",
+          "computer": "DESKTOP-UNUFLEI",
+          "task": "0",
+          "processID": "0",
+          "severityValue": "INFORMATION",
+          "providerName": "MsiInstaller"
+        }
+      }
+    },
+    "rule": {
+      "firedtimes": 2,
+      "mail": false,
+      "level": 3,
+      "description": "Application installed Dr. Memory, 2.6.0, 1033, 0, Google.",
+      "groups": [
+        "windows",
+        "windows_application"
+      ],
+      "id": "60612"
+    },
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "input": {
+      "type": "log"
+    },
+    "@timestamp": "2024-10-07T02:56:47.606Z",
+    "location": "EventChannel",
+    "id": "1728269807.355975",
+    "timestamp": "2024-10-07T09:56:47.606+0700"
+  },
+  "fields": {
+    "@timestamp": [
+      "2024-10-07T02:56:47.606Z"
+    ],
+    "timestamp": [
+      "2024-10-07T02:56:47.606Z"
+    ]
+  }
+}

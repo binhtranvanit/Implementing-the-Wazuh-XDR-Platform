@@ -1,0 +1,104 @@
+{
+  "_index": "wazuh-alerts-4.x-2024.09.23",
+  "_id": "yXUyHZIBhsAhco6y6wYO",
+  "_score": 1,
+  "_source": {
+    "syscheck": {
+      "uname_after": "ubuntu",
+      "mtime_after": "2024-09-23T11:42:50",
+      "size_after": "18",
+      "gid_after": "1000",
+      "mode": "realtime",
+      "path": "/home/ubuntu/bsoc/TestWazuh.txt",
+      "sha1_after": "fc96f9b4a531b03c376bc6e2cdc3341a52c41c63",
+      "gname_after": "ubuntu",
+      "uid_after": "1000",
+      "perm_after": "rw-rw-r--",
+      "event": "deleted",
+      "md5_after": "457f1474b6adcb0eb836a2b99068bd8a",
+      "sha256_after": "1c5740d61f62cbadb09993a17c00a863b9e07adcecee390a548ad697f0fdf0f2",
+      "inode_after": 655618
+    },
+    "agent": {
+      "ip": "192.168.11.5",
+      "name": "wa_ubuntu",
+      "id": "001"
+    },
+    "manager": {
+      "name": "ubuntu"
+    },
+    "rule": {
+      "mail": false,
+      "level": 7,
+      "pci_dss": [
+        "11.5"
+      ],
+      "hipaa": [
+        "164.312.c.1",
+        "164.312.c.2"
+      ],
+      "tsc": [
+        "PI1.4",
+        "PI1.5",
+        "CC6.1",
+        "CC6.8",
+        "CC7.2",
+        "CC7.3"
+      ],
+      "description": "File deleted.",
+      "groups": [
+        "ossec",
+        "syscheck",
+        "syscheck_entry_deleted",
+        "syscheck_file"
+      ],
+      "nist_800_53": [
+        "SI.7"
+      ],
+      "gdpr": [
+        "II_5.1.f"
+      ],
+      "firedtimes": 3,
+      "mitre": {
+        "technique": [
+          "File Deletion",
+          "Data Destruction"
+        ],
+        "id": [
+          "T1070.004",
+          "T1485"
+        ],
+        "tactic": [
+          "Defense Evasion",
+          "Impact"
+        ]
+      },
+      "id": "553",
+      "gpg13": [
+        "4.11"
+      ]
+    },
+    "decoder": {
+      "name": "syscheck_deleted"
+    },
+    "full_log": "File '/home/ubuntu/bsoc/TestWazuh.txt' deleted\nMode: realtime\n",
+    "input": {
+      "type": "log"
+    },
+    "@timestamp": "2024-09-23T04:45:25.596Z",
+    "location": "syscheck",
+    "id": "1727066725.647889",
+    "timestamp": "2024-09-23T11:45:25.596+0700"
+  },
+  "fields": {
+    "syscheck.mtime_after": [
+      "2024-09-23T11:42:50.000Z"
+    ],
+    "@timestamp": [
+      "2024-09-23T04:45:25.596Z"
+    ],
+    "timestamp": [
+      "2024-09-23T04:45:25.596Z"
+    ]
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "_index": "wazuh-alerts-4.x-2024.09.25",
+  "_id": "0oqAKJIB1lmgO2tnqtKd",
+  "_score": 1,
+  "_source": {
+    "agent": {
+      "ip": "192.168.11.5",
+      "name": "wa_ubuntu",
+      "id": "001"
+    },
+    "manager": {
+      "name": "ubuntu"
+    },
+    "data": {
+      "sca": {
+        "score": "0",
+        "total_checks": "1",
+        "file": "keywordcheck.yml",
+        "policy_id": "keyword_check",
+        "invalid": "0",
+        "description": "Guidance for checking for a keyword or phrase in files on Ubuntu endpoints.",
+        "scan_id": "154413126",
+        "passed": "0",
+        "failed": "1",
+        "type": "summary",
+        "policy": "SCA use case: Keyword check"
+      }
+    },
+    "rule": {
+      "firedtimes": 1,
+      "mail": false,
+      "level": 9,
+      "pci_dss": [
+        "2.2"
+      ],
+      "tsc": [
+        "CC7.1",
+        "CC7.2"
+      ],
+      "description": "SCA summary: SCA use case: Keyword check: Score less than 30% (0)",
+      "groups": [
+        "sca"
+      ],
+      "id": "19005",
+      "nist_800_53": [
+        "CM.1"
+      ],
+      "gdpr": [
+        "IV_35.7.d"
+      ]
+    },
+    "decoder": {
+      "name": "sca"
+    },
+    "input": {
+      "type": "log"
+    },
+    "@timestamp": "2024-09-25T09:26:08.750Z",
+    "location": "sca",
+    "id": "1727256368.111850",
+    "timestamp": "2024-09-25T16:26:08.750+0700"
+  },
+  "fields": {
+    "@timestamp": [
+      "2024-09-25T09:26:08.750Z"
+    ],
+    "timestamp": [
+      "2024-09-25T09:26:08.750Z"
+    ]
+  }
+}

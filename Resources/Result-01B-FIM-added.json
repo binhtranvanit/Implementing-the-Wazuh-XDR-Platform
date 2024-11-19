@@ -1,0 +1,90 @@
+{
+  "_index": "wazuh-alerts-4.x-2024.09.23",
+  "_id": "wXUtHZIBhsAhco6y4Qbf",
+  "_score": 1,
+  "_source": {
+    "syscheck": {
+      "uname_after": "ubuntu",
+      "mtime_after": "2024-09-23T11:39:54",
+      "size_after": "14",
+      "gid_after": "1000",
+      "mode": "realtime",
+      "path": "/home/ubuntu/bsoc/TestWazuh.txt",
+      "sha1_after": "4cd071ea82423808ed7627ce9679fd39cb0188a0",
+      "gname_after": "ubuntu",
+      "uid_after": "1000",
+      "perm_after": "rw-rw-r--",
+      "event": "added",
+      "md5_after": "790be76a983412fb8a739ede17f0691f",
+      "sha256_after": "f871fd4f06bfc44d0c06d0f3777801a0f4e8c3a72dffb4e8c2e8a7f54d3676a8",
+      "inode_after": 655618
+    },
+    "agent": {
+      "ip": "192.168.11.5",
+      "name": "wa_ubuntu",
+      "id": "001"
+    },
+    "manager": {
+      "name": "ubuntu"
+    },
+    "rule": {
+      "firedtimes": 2,
+      "mail": false,
+      "level": 5,
+      "pci_dss": [
+        "11.5"
+      ],
+      "hipaa": [
+        "164.312.c.1",
+        "164.312.c.2"
+      ],
+      "tsc": [
+        "PI1.4",
+        "PI1.5",
+        "CC6.1",
+        "CC6.8",
+        "CC7.2",
+        "CC7.3"
+      ],
+      "description": "File added to the system.",
+      "groups": [
+        "ossec",
+        "syscheck",
+        "syscheck_entry_added",
+        "syscheck_file"
+      ],
+      "id": "554",
+      "nist_800_53": [
+        "SI.7"
+      ],
+      "gpg13": [
+        "4.11"
+      ],
+      "gdpr": [
+        "II_5.1.f"
+      ]
+    },
+    "decoder": {
+      "name": "syscheck_new_entry"
+    },
+    "full_log": "File '/home/ubuntu/bsoc/TestWazuh.txt' added\nMode: realtime\n",
+    "input": {
+      "type": "log"
+    },
+    "@timestamp": "2024-09-23T04:39:54.202Z",
+    "location": "syscheck",
+    "id": "1727066394.645863",
+    "timestamp": "2024-09-23T11:39:54.202+0700"
+  },
+  "fields": {
+    "syscheck.mtime_after": [
+      "2024-09-23T11:39:54.000Z"
+    ],
+    "@timestamp": [
+      "2024-09-23T04:39:54.202Z"
+    ],
+    "timestamp": [
+      "2024-09-23T04:39:54.202Z"
+    ]
+  }
+}

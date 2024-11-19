@@ -1,0 +1,93 @@
+{
+  "_index": "wazuh-alerts-4.x-2024.09.27",
+  "_id": "XjTcMJIB3ydFtSlh3tkM",
+  "_score": 1,
+  "_source": {
+    "agent": {
+      "ip": "192.168.11.5",
+      "name": "wa_ubuntu",
+      "id": "001"
+    },
+    "data": {
+      "srcip": "192.168.83.148",
+      "dstuser": "ubuntu",
+      "srcport": "33612"
+    },
+    "rule": {
+      "mail": false,
+      "level": 10,
+      "hipaa": [
+        "164.312.b"
+      ],
+      "pci_dss": [
+        "11.4",
+        "10.2.4",
+        "10.2.5"
+      ],
+      "tsc": [
+        "CC6.1",
+        "CC6.8",
+        "CC7.2",
+        "CC7.3"
+      ],
+      "description": "sshd: brute force trying to get access to the system. Authentication failed.",
+      "groups": [
+        "syslog",
+        "sshd",
+        "authentication_failures"
+      ],
+      "nist_800_53": [
+        "SI.4",
+        "AU.14",
+        "AC.7"
+      ],
+      "frequency": 8,
+      "gdpr": [
+        "IV_35.7.d",
+        "IV_32.2"
+      ],
+      "firedtimes": 1,
+      "mitre": {
+        "technique": [
+          "Brute Force"
+        ],
+        "id": [
+          "T1110"
+        ],
+        "tactic": [
+          "Credential Access"
+        ]
+      },
+      "id": "5763"
+    },
+    "full_log": "Sep 27 00:23:48 ubuntu sshd[4686]: Failed password for ubuntu from 192.168.83.148 port 33612 ssh2",
+    "id": "1727396629.5425785",
+    "timestamp": "2024-09-27T07:23:49.810+0700",
+    "predecoder": {
+      "hostname": "ubuntu",
+      "program_name": "sshd",
+      "timestamp": "Sep 27 00:23:48"
+    },
+    "previous_output": "Sep 27 00:23:48 ubuntu sshd[4685]: Failed password for ubuntu from 192.168.83.148 port 33596 ssh2\nSep 27 00:23:48 ubuntu sshd[4684]: Failed password for ubuntu from 192.168.83.148 port 33576 ssh2\nSep 27 00:23:48 ubuntu sshd[4683]: Failed password for ubuntu from 192.168.83.148 port 33578 ssh2\nSep 27 00:23:45 ubuntu sshd[4684]: Failed password for ubuntu from 192.168.83.148 port 33576 ssh2\nSep 27 00:23:45 ubuntu sshd[4686]: Failed password for ubuntu from 192.168.83.148 port 33612 ssh2\nSep 27 00:23:45 ubuntu sshd[4685]: Failed password for ubuntu from 192.168.83.148 port 33596 ssh2\nSep 27 00:23:45 ubuntu sshd[4683]: Failed password for ubuntu from 192.168.83.148 port 33578 ssh2",
+    "manager": {
+      "name": "ubuntu"
+    },
+    "decoder": {
+      "parent": "sshd",
+      "name": "sshd"
+    },
+    "input": {
+      "type": "log"
+    },
+    "@timestamp": "2024-09-27T00:23:49.810Z",
+    "location": "journald"
+  },
+  "fields": {
+    "@timestamp": [
+      "2024-09-27T00:23:49.810Z"
+    ],
+    "timestamp": [
+      "2024-09-27T00:23:49.810Z"
+    ]
+  }
+}

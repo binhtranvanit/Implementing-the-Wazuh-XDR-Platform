@@ -1,0 +1,89 @@
+{
+    "_index": "wazuh-alerts-4.x-2024.09.24",
+    "_id": "divGIZIBv7uCojl-ME2s",
+    "_score": 1,
+    "_source": {
+      "syscheck": {
+        "size_before": "9150464",
+        "uname_after": "root",
+        "mtime_after": "2024-09-24T09:04:47",
+        "size_after": "9568976",
+        "gid_after": "0",
+        "md5_before": "7277ae625ad50a3f6d9973816c230ae5",
+        "sha256_before": "6905d816b76fa1c89605918678a2f6277608893696d0618910eb6527cb230287",
+        "mtime_before": "2024-09-24T09:04:46",
+        "mode": "realtime",
+        "path": "/home/ubuntu/bsoc/Xbash",
+        "sha1_after": "effa37b97174802f17f3c75f25928226b7cd80ba",
+        "changed_attributes": [
+          "size",
+          "mtime",
+          "md5",
+          "sha1",
+          "sha256"
+        ],
+        "gname_after": "root",
+        "uid_after": "0",
+        "perm_after": "rw-r--r--",
+        "event": "modified",
+        "md5_after": "55142f1d393c5ba7405239f232a6c059",
+        "sha1_before": "7358e5a7cd5f080012e0279d2b3abf7aaf82faf4",
+        "sha256_after": "e59be6eec9629d376a8a4a70fe9f8f3eec7b0919019f819d44b9bdd1c429277c",
+        "inode_after": 655607
+      },
+      "agent": {
+        "ip": "192.168.11.5",
+        "name": "wa_ubuntu",
+        "id": "001"
+      },
+      "manager": {
+        "name": "ubuntu"
+      },
+      "rule": {
+        "firedtimes": 2,
+        "mail": true,
+        "level": 13,
+        "description": "BSOC - File with known malware hash detected: /home/ubuntu/bsoc/Xbash",
+        "groups": [
+          "malware"
+        ],
+        "mitre": {
+          "technique": [
+            "Malicious File"
+          ],
+          "id": [
+            "T1204.002"
+          ],
+          "tactic": [
+            "Execution"
+          ]
+        },
+        "id": "110002"
+      },
+      "decoder": {
+        "name": "syscheck_integrity_changed"
+      },
+      "full_log": "File '/home/ubuntu/bsoc/Xbash' modified\nMode: realtime\nChanged attributes: size,mtime,md5,sha1,sha256\nSize changed from '9150464' to '9568976'\nOld modification time was: '1727143486', now it is '1727143487'\nOld md5sum was: '7277ae625ad50a3f6d9973816c230ae5'\nNew md5sum is : '55142f1d393c5ba7405239f232a6c059'\nOld sha1sum was: '7358e5a7cd5f080012e0279d2b3abf7aaf82faf4'\nNew sha1sum is : 'effa37b97174802f17f3c75f25928226b7cd80ba'\nOld sha256sum was: '6905d816b76fa1c89605918678a2f6277608893696d0618910eb6527cb230287'\nNew sha256sum is : 'e59be6eec9629d376a8a4a70fe9f8f3eec7b0919019f819d44b9bdd1c429277c'\n",
+      "input": {
+        "type": "log"
+      },
+      "@timestamp": "2024-09-24T02:04:47.982Z",
+      "location": "syscheck",
+      "id": "1727143487.188913",
+      "timestamp": "2024-09-24T09:04:47.982+0700"
+    },
+    "fields": {
+      "syscheck.mtime_after": [
+        "2024-09-24T09:04:47.000Z"
+      ],
+      "syscheck.mtime_before": [
+        "2024-09-24T09:04:46.000Z"
+      ],
+      "@timestamp": [
+        "2024-09-24T02:04:47.982Z"
+      ],
+      "timestamp": [
+        "2024-09-24T02:04:47.982Z"
+      ]
+    }
+  }

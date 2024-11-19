@@ -1,0 +1,55 @@
+{
+  "_index": "wazuh-alerts-4.x-2024.09.28",
+  "_id": "SglMOZIBfyHDeQGwYP91",
+  "_score": 1,
+  "_source": {
+    "agent": {
+      "ip": "192.168.11.5",
+      "name": "wa_ubuntu",
+      "id": "001"
+    },
+    "manager": {
+      "name": "ubuntu"
+    },
+    "data": {
+      "file": "/usr/bin/w",
+      "title": "Trojaned version of file detected."
+    },
+    "rule": {
+      "firedtimes": 50,
+      "mail": false,
+      "level": 7,
+      "pci_dss": [
+        "10.6.1"
+      ],
+      "description": "Host-based anomaly detection event (rootcheck).",
+      "groups": [
+        "ossec",
+        "rootcheck"
+      ],
+      "id": "510",
+      "gdpr": [
+        "IV_35.7.d"
+      ]
+    },
+    "decoder": {
+      "name": "rootcheck"
+    },
+    "full_log": "Trojaned version of file '/usr/bin/w' detected. Signature used: 'uname -a|proc\\.h|bash' (Generic).",
+    "input": {
+      "type": "log"
+    },
+    "@timestamp": "2024-09-28T15:42:34.489Z",
+    "location": "rootcheck",
+    "id": "1727538154.253425",
+    "timestamp": "2024-09-28T22:42:34.489+0700"
+  },
+  "fields": {
+    "@timestamp": [
+      "2024-09-28T15:42:34.489Z"
+    ],
+    "timestamp": [
+      "2024-09-28T15:42:34.489Z"
+    ]
+  }
+}

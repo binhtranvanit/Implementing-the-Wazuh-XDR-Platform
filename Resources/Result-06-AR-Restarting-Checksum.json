@@ -1,0 +1,118 @@
+{
+  "_index": "wazuh-alerts-4.x-2024.09.26",
+  "_id": "mm4pLJIBnR9KWRUygc4P",
+  "_score": 1,
+  "_source": {
+    "syscheck": {
+      "size_before": "3899",
+      "uname_after": "root",
+      "mtime_after": "2024-09-26T09:29:28",
+      "inode_before": 655623,
+      "size_after": "3898",
+      "gid_after": "0",
+      "md5_before": "dc7e54060a194237ae69d54afcadc6da",
+      "sha256_before": "e751b914b1eef0f68519d5882112c1f8cd992e27ec8917b2ea1eddfeda6a7c6d",
+      "mtime_before": "2024-09-26T09:29:10",
+      "mode": "realtime",
+      "path": "/root/.local/share/recently-used.xbel",
+      "sha1_after": "74a52f805dd299fc65c52b17eaf1d1c730b97af3",
+      "changed_attributes": [
+        "size",
+        "inode",
+        "mtime",
+        "md5",
+        "sha1",
+        "sha256"
+      ],
+      "gname_after": "root",
+      "uid_after": "0",
+      "perm_after": "rw-------",
+      "event": "modified",
+      "md5_after": "5c75a22ac4e9fa4850ff6a88fb3d50ce",
+      "sha1_before": "e2a5386255d01e8591f4d1c6b9818e1d5a71131c",
+      "sha256_after": "5a9c5ec8bfdf87f27192082be09a5f3941f02e9d19a56df75a8b5acb7845d31d",
+      "inode_after": 655624
+    },
+    "agent": {
+      "ip": "192.168.11.5",
+      "name": "wa_ubuntu",
+      "id": "001"
+    },
+    "manager": {
+      "name": "ubuntu"
+    },
+    "rule": {
+      "mail": false,
+      "level": 7,
+      "pci_dss": [
+        "11.5"
+      ],
+      "hipaa": [
+        "164.312.c.1",
+        "164.312.c.2"
+      ],
+      "tsc": [
+        "PI1.4",
+        "PI1.5",
+        "CC6.1",
+        "CC6.8",
+        "CC7.2",
+        "CC7.3"
+      ],
+      "description": "Integrity checksum changed.",
+      "groups": [
+        "ossec",
+        "syscheck",
+        "syscheck_entry_modified",
+        "syscheck_file"
+      ],
+      "nist_800_53": [
+        "SI.7"
+      ],
+      "gdpr": [
+        "II_5.1.f"
+      ],
+      "firedtimes": 5,
+      "mitre": {
+        "technique": [
+          "Stored Data Manipulation"
+        ],
+        "id": [
+          "T1565.001"
+        ],
+        "tactic": [
+          "Impact"
+        ]
+      },
+      "id": "550",
+      "gpg13": [
+        "4.11"
+      ]
+    },
+    "decoder": {
+      "name": "syscheck_integrity_changed"
+    },
+    "full_log": "File '/root/.local/share/recently-used.xbel' modified\nMode: realtime\nChanged attributes: size,inode,mtime,md5,sha1,sha256\nSize changed from '3899' to '3898'\nOld modification time was: '1727317750', now it is '1727317768'\nOld inode was: '655623', now it is '655624'\nOld md5sum was: 'dc7e54060a194237ae69d54afcadc6da'\nNew md5sum is : '5c75a22ac4e9fa4850ff6a88fb3d50ce'\nOld sha1sum was: 'e2a5386255d01e8591f4d1c6b9818e1d5a71131c'\nNew sha1sum is : '74a52f805dd299fc65c52b17eaf1d1c730b97af3'\nOld sha256sum was: 'e751b914b1eef0f68519d5882112c1f8cd992e27ec8917b2ea1eddfeda6a7c6d'\nNew sha256sum is : '5a9c5ec8bfdf87f27192082be09a5f3941f02e9d19a56df75a8b5acb7845d31d'\n",
+    "input": {
+      "type": "log"
+    },
+    "@timestamp": "2024-09-26T02:29:28.318Z",
+    "location": "syscheck",
+    "id": "1727317768.125987",
+    "timestamp": "2024-09-26T09:29:28.318+0700"
+  },
+  "fields": {
+    "syscheck.mtime_after": [
+      "2024-09-26T09:29:28.000Z"
+    ],
+    "syscheck.mtime_before": [
+      "2024-09-26T09:29:10.000Z"
+    ],
+    "@timestamp": [
+      "2024-09-26T02:29:28.318Z"
+    ],
+    "timestamp": [
+      "2024-09-26T02:29:28.318Z"
+    ]
+  }
+}

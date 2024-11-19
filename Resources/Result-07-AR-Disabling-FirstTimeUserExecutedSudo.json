@@ -1,0 +1,71 @@
+{
+  "_index": "wazuh-alerts-4.x-2024.09.26",
+  "_id": "Zm59LJIBnR9KWRUyms8K",
+  "_score": 1,
+  "_source": {
+    "predecoder": {
+      "hostname": "ubuntu",
+      "program_name": "sudo",
+      "timestamp": "Sep 26 04:01:17"
+    },
+    "agent": {
+      "ip": "192.168.11.5",
+      "name": "wa_ubuntu",
+      "id": "001"
+    },
+    "manager": {
+      "name": "ubuntu"
+    },
+    "data": {
+      "srcuser": "user1",
+      "dstuser": "root",
+      "tty": "pts/1",
+      "pwd": "/home/ubuntu",
+      "command": "/usr/bin/passwd --status user2"
+    },
+    "rule": {
+      "firedtimes": 1,
+      "mail": false,
+      "level": 4,
+      "description": "First time user executed sudo.",
+      "groups": [
+        "syslog",
+        "sudo"
+      ],
+      "mitre": {
+        "technique": [
+          "Sudo and Sudo Caching"
+        ],
+        "id": [
+          "T1548.003"
+        ],
+        "tactic": [
+          "Privilege Escalation",
+          "Defense Evasion"
+        ]
+      },
+      "id": "5403"
+    },
+    "decoder": {
+      "parent": "sudo",
+      "name": "sudo",
+      "ftscomment": "First time user executed the sudo command"
+    },
+    "full_log": "Sep 26 04:01:17 ubuntu sudo[45625]:    user1 : TTY=pts/1 ; PWD=/home/ubuntu ; USER=root ; COMMAND=/usr/bin/passwd --status user2",
+    "input": {
+      "type": "log"
+    },
+    "@timestamp": "2024-09-26T04:01:18.631Z",
+    "location": "journald",
+    "id": "1727323278.206154",
+    "timestamp": "2024-09-26T11:01:18.631+0700"
+  },
+  "fields": {
+    "@timestamp": [
+      "2024-09-26T04:01:18.631Z"
+    ],
+    "timestamp": [
+      "2024-09-26T04:01:18.631Z"
+    ]
+  }
+}

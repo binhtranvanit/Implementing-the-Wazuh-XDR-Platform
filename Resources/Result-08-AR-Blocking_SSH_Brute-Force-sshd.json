@@ -1,0 +1,94 @@
+{
+  "_index": "wazuh-alerts-4.x-2024.09.27",
+  "_id": "XTTcMJIB3ydFtSlh3tkM",
+  "_score": null,
+  "_source": {
+    "predecoder": {
+      "hostname": "ubuntu",
+      "program_name": "sshd",
+      "timestamp": "Sep 27 00:23:48"
+    },
+    "input": {
+      "type": "log"
+    },
+    "agent": {
+      "ip": "192.168.11.5",
+      "name": "wa_ubuntu",
+      "id": "001"
+    },
+    "manager": {
+      "name": "ubuntu"
+    },
+    "data": {
+      "srcip": "192.168.83.148",
+      "dstuser": "ubuntu",
+      "srcport": "33596"
+    },
+    "rule": {
+      "mail": false,
+      "level": 5,
+      "hipaa": [
+        "164.312.b"
+      ],
+      "pci_dss": [
+        "10.2.4",
+        "10.2.5"
+      ],
+      "tsc": [
+        "CC6.1",
+        "CC6.8",
+        "CC7.2",
+        "CC7.3"
+      ],
+      "description": "sshd: authentication failed.",
+      "groups": [
+        "syslog",
+        "sshd",
+        "authentication_failed"
+      ],
+      "nist_800_53": [
+        "AU.14",
+        "AC.7"
+      ],
+      "gdpr": [
+        "IV_35.7.d",
+        "IV_32.2"
+      ],
+      "firedtimes": 7,
+      "mitre": {
+        "technique": [
+          "Password Guessing",
+          "SSH"
+        ],
+        "id": [
+          "T1110.001",
+          "T1021.004"
+        ],
+        "tactic": [
+          "Credential Access",
+          "Lateral Movement"
+        ]
+      },
+      "id": "5760",
+      "gpg13": [
+        "7.1"
+      ]
+    },
+    "location": "journald",
+    "decoder": {
+      "parent": "sshd",
+      "name": "sshd"
+    },
+    "id": "1727396629.5425307",
+    "full_log": "Sep 27 00:23:48 ubuntu sshd[4685]: Failed password for ubuntu from 192.168.83.148 port 33596 ssh2",
+    "timestamp": "2024-09-27T07:23:49.807+0700"
+  },
+  "fields": {
+    "timestamp": [
+      "2024-09-27T00:23:49.807Z"
+    ]
+  },
+  "sort": [
+    1727396629807
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "_index": "wazuh-alerts-4.x-2024.09.25",
+  "_id": "0YqAKJIB1lmgO2tnj9JF",
+  "_score": 1,
+  "_source": {
+    "agent": {
+      "ip": "192.168.11.5",
+      "name": "wa_ubuntu",
+      "id": "001"
+    },
+    "manager": {
+      "name": "ubuntu"
+    },
+    "data": {
+      "sca": {
+        "scan_id": "154413126",
+        "check": {
+          "result": "failed",
+          "remediation": "Disable password by setting the value of the password_enabled option to no.",
+          "file": [
+            "/usr/share/testfile.txt"
+          ],
+          "description": "Password is enabled in the test configuration file.",
+          "id": "10000",
+          "title": "Ensure password is disabled in the test configuration file",
+          "rationale": "Password is considered weak for the custom test application. Threat actors can brute-force your password."
+        },
+        "type": "check",
+        "policy": "SCA use case: Keyword check"
+      }
+    },
+    "rule": {
+      "firedtimes": 1,
+      "mail": false,
+      "level": 7,
+      "pci_dss": [
+        "2.2"
+      ],
+      "tsc": [
+        "CC7.1",
+        "CC7.2"
+      ],
+      "description": "SCA use case: Keyword check: Ensure password is disabled in the test configuration file",
+      "groups": [
+        "sca"
+      ],
+      "id": "19007",
+      "nist_800_53": [
+        "CM.1"
+      ],
+      "gdpr": [
+        "IV_35.7.d"
+      ]
+    },
+    "decoder": {
+      "name": "sca"
+    },
+    "input": {
+      "type": "log"
+    },
+    "@timestamp": "2024-09-25T09:26:01.763Z",
+    "location": "sca",
+    "id": "1727256361.110442",
+    "timestamp": "2024-09-25T16:26:01.763+0700"
+  },
+  "fields": {
+    "@timestamp": [
+      "2024-09-25T09:26:01.763Z"
+    ],
+    "timestamp": [
+      "2024-09-25T09:26:01.763Z"
+    ]
+  }
+}

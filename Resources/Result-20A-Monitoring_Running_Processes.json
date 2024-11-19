@@ -1,0 +1,44 @@
+{
+  "_index": "wazuh-alerts-4.x-2024.10.02",
+  "_id": "yCoAS5IBk-_4zc3J8ZK9",
+  "_score": 1,
+  "_source": {
+    "agent": {
+      "ip": "192.168.13.5",
+      "name": "wa_windows",
+      "id": "002"
+    },
+    "manager": {
+      "name": "ubuntu"
+    },
+    "rule": {
+      "firedtimes": 1,
+      "mail": false,
+      "level": 6,
+      "description": "Notepad.exe is running.",
+      "groups": [
+        "process_monitor"
+      ],
+      "id": "100010"
+    },
+    "decoder": {
+      "name": "tasklist"
+    },
+    "full_log": "tasklist: notepad.exe                   1476 Console                    1     38,852 K\r",
+    "input": {
+      "type": "log"
+    },
+    "@timestamp": "2024-10-02T02:13:24.026Z",
+    "location": "command_tasklist",
+    "id": "1727835204.1186940",
+    "timestamp": "2024-10-02T09:13:24.026+0700"
+  },
+  "fields": {
+    "@timestamp": [
+      "2024-10-02T02:13:24.026Z"
+    ],
+    "timestamp": [
+      "2024-10-02T02:13:24.026Z"
+    ]
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "_index": "wazuh-alerts-4.x-2024.09.30",
+  "_id": "N9w9QZIBpmDQi2p4ICBc",
+  "_score": 1,
+  "_source": {
+    "agent": {
+      "ip": "192.168.11.5",
+      "name": "wa_ubuntu",
+      "id": "001"
+    },
+    "manager": {
+      "name": "ubuntu"
+    },
+    "data": {
+      "audit": {
+        "syscall": "59",
+        "gid": "0",
+        "fsgid": "0",
+        "session": "3",
+        "pid": "16974",
+        "suid": "0",
+        "type": "SYSCALL",
+        "uid": "0",
+        "egid": "0",
+        "exe": "/usr/bin/nc",
+        "file": {
+          "inode": "790212",
+          "mode": "0100755",
+          "name": "/usr/bin/nc"
+        },
+        "sgid": "0",
+        "id": "491",
+        "key": "audit-wazuh-c",
+        "auid": "1000",
+        "execve": {
+          "a1": "-v",
+          "a0": "nc"
+        },
+        "euid": "0",
+        "command": "nc",
+        "ppid": "4459",
+        "fsuid": "0",
+        "exit": "0",
+        "cwd": "/home/ubuntu",
+        "success": "yes",
+        "tty": "pts1",
+        "arch": "c000003e"
+      }
+    },
+    "rule": {
+      "firedtimes": 1,
+      "mail": true,
+      "level": 12,
+      "description": "Audit: Highly Suspicious Command executed: /usr/bin/nc",
+      "groups": [
+        "auditaudit_command"
+      ],
+      "id": "100210"
+    },
+    "decoder": {
+      "parent": "auditd",
+      "name": "auditd"
+    },
+    "full_log": "type=SYSCALL msg=audit(1727671376.326:491): arch=c000003e syscall=59 success=yes exit=0 a0=5e28ae489220 a1=5e28ae489200 a2=5e28ae45cc30 a3=8 items=2 ppid=4459 pid=16974 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts1 ses=3 comm=\"nc\" exe=\"/usr/bin/nc.openbsd\" subj=unconfined key=\"audit-wazuh-c\"\u001dARCH=x86_64 SYSCALL=execve AUID=\"ubuntu\" UID=\"root\" GID=\"root\" EUID=\"root\" SUID=\"root\" FSUID=\"root\" EGID=\"root\" SGID=\"root\" FSGID=\"root\" type=EXECVE msg=audit(1727671376.326:491): argc=2 a0=\"nc\" a1=\"-v\" type=CWD msg=audit(1727671376.326:491): cwd=\"/home/ubuntu\" type=PATH msg=audit(1727671376.326:491): item=0 name=\"/usr/bin/nc\" inode=790212 dev=08:03 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0\u001dOUID=\"root\" OGID=\"root\" type=PATH msg=audit(1727671376.326:491): item=1 name=\"/lib64/ld-linux-x86-64.so.2\" inode=817016 dev=08:03 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0\u001dOUID=\"root\" OGID=\"root\" type=PROCTITLE msg=audit(1727671376.326:491): proctitle=6E63002D76",
+    "input": {
+      "type": "log"
+    },
+    "@timestamp": "2024-09-30T04:42:56.608Z",
+    "location": "/var/log/audit/audit.log",
+    "id": "1727671376.464892",
+    "timestamp": "2024-09-30T11:42:56.608+0700"
+  },
+  "fields": {
+    "@timestamp": [
+      "2024-09-30T04:42:56.608Z"
+    ],
+    "timestamp": [
+      "2024-09-30T04:42:56.608Z"
+    ]
+  }
+}

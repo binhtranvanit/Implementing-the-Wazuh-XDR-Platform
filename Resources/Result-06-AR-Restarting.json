@@ -1,0 +1,80 @@
+{
+  "_index": "wazuh-alerts-4.x-2024.09.26",
+  "_id": "mW4pLJIBnR9KWRUyfc4g",
+  "_score": 1,
+  "_source": {
+    "syscheck": {
+      "size_before": "6347",
+      "uname_after": "root",
+      "mtime_after": "2024-09-26T09:29:28",
+      "inode_before": 529048,
+      "size_after": "6354",
+      "gid_after": "137",
+      "md5_before": "57a3ff6aac85480c13b75330fe556709",
+      "sha256_before": "61079397c6fc34c16f918db595844fecebca18869ca02aee0fb6c1396086c287",
+      "mtime_before": "2024-09-26T08:26:41",
+      "mode": "realtime",
+      "path": "/var/ossec/etc/ossec.conf",
+      "sha1_after": "330a6908d6da00135d47c9ddea964a2bd96e1bf9",
+      "changed_attributes": [
+        "size",
+        "inode",
+        "mtime",
+        "md5",
+        "sha1",
+        "sha256"
+      ],
+      "gname_after": "wazuh",
+      "uid_after": "0",
+      "perm_after": "rw-rw----",
+      "event": "modified",
+      "md5_after": "6ee053d86edd8028f70cf60ddbe06227",
+      "sha1_before": "6f1ec33c78a761a0a929fcbbfea4dee5adf6d47d",
+      "sha256_after": "944b729c25dde69959a696ffb7ebd5d8d5c3bf34adc4a15994f675fa2b7d3743",
+      "inode_after": 524920
+    },
+    "agent": {
+      "ip": "192.168.11.5",
+      "name": "wa_ubuntu",
+      "id": "001"
+    },
+    "manager": {
+      "name": "ubuntu"
+    },
+    "rule": {
+      "firedtimes": 1,
+      "mail": false,
+      "level": 5,
+      "description": "Changes made to the agent configuration file - /var/ossec/etc/ossec.conf",
+      "groups": [
+        "restart"
+      ],
+      "id": "100009"
+    },
+    "decoder": {
+      "name": "syscheck_integrity_changed"
+    },
+    "full_log": "File '/var/ossec/etc/ossec.conf' modified\nMode: realtime\nChanged attributes: size,inode,mtime,md5,sha1,sha256\nSize changed from '6347' to '6354'\nOld modification time was: '1727314001', now it is '1727317768'\nOld inode was: '529048', now it is '524920'\nOld md5sum was: '57a3ff6aac85480c13b75330fe556709'\nNew md5sum is : '6ee053d86edd8028f70cf60ddbe06227'\nOld sha1sum was: '6f1ec33c78a761a0a929fcbbfea4dee5adf6d47d'\nNew sha1sum is : '330a6908d6da00135d47c9ddea964a2bd96e1bf9'\nOld sha256sum was: '61079397c6fc34c16f918db595844fecebca18869ca02aee0fb6c1396086c287'\nNew sha256sum is : '944b729c25dde69959a696ffb7ebd5d8d5c3bf34adc4a15994f675fa2b7d3743'\n",
+    "input": {
+      "type": "log"
+    },
+    "@timestamp": "2024-09-26T02:29:28.053Z",
+    "location": "syscheck",
+    "id": "1727317768.124841",
+    "timestamp": "2024-09-26T09:29:28.053+0700"
+  },
+  "fields": {
+    "syscheck.mtime_after": [
+      "2024-09-26T09:29:28.000Z"
+    ],
+    "syscheck.mtime_before": [
+      "2024-09-26T08:26:41.000Z"
+    ],
+    "@timestamp": [
+      "2024-09-26T02:29:28.053Z"
+    ],
+    "timestamp": [
+      "2024-09-26T02:29:28.053Z"
+    ]
+  }
+}

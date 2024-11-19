@@ -1,0 +1,110 @@
+{
+  "_index": "wazuh-alerts-4.x-2024.09.29",
+  "_id": "QRFHPpIBjb5RHBuWm2Gq",
+  "_score": 1,
+  "_source": {
+    "agent": {
+      "ip": "192.168.11.5",
+      "name": "wa_ubuntu",
+      "id": "001"
+    },
+    "manager": {
+      "name": "ubuntu"
+    },
+    "data": {
+      "origin": {
+        "module": "wazuh-execd",
+        "name": "node01"
+      },
+      "version": "1",
+      "parameters": {
+        "alert": {
+          "agent": {
+            "ip": "192.168.11.5",
+            "name": "wa_ubuntu",
+            "id": "001"
+          },
+          "manager": {
+            "name": "ubuntu"
+          },
+          "data": {
+            "protocol": "GET",
+            "srcip": "192.168.83.148",
+            "id": "200",
+            "url": "/"
+          },
+          "rule": {
+            "firedtimes": "1",
+            "mail": "false",
+            "level": "10",
+            "description": "IP address found in AlienVault reputation database.",
+            "groups": [
+              "attack"
+            ],
+            "id": "100100"
+          },
+          "location": "/var/log/apache2/access.log",
+          "id": "1727621728.184979",
+          "decoder": {
+            "name": "web-accesslog"
+          },
+          "timestamp": "2024-09-29T21:55:28.032+0700",
+          "full_log": "192.168.83.148 - - [29/Sep/2024:21:55:26 +0700] \"GET / HTTP/1.1\" 200 10926 \"-\" \"curl/8.5.0\""
+        },
+        "extra_args": [],
+        "program": "active-response/bin/firewall-drop"
+      },
+      "command": "add"
+    },
+    "rule": {
+      "firedtimes": 1,
+      "mail": false,
+      "level": 3,
+      "pci_dss": [
+        "11.4"
+      ],
+      "tsc": [
+        "CC6.1",
+        "CC6.8",
+        "CC7.2",
+        "CC7.3",
+        "CC7.4"
+      ],
+      "description": "Host Blocked by firewall-drop Active Response",
+      "groups": [
+        "ossec",
+        "active_response"
+      ],
+      "id": "651",
+      "nist_800_53": [
+        "SI.4"
+      ],
+      "gpg13": [
+        "4.13"
+      ],
+      "gdpr": [
+        "IV_35.7.d"
+      ]
+    },
+    "decoder": {
+      "parent": "ar_log_json",
+      "name": "ar_log_json"
+    },
+    "full_log": "2024/09/29 21:55:28 active-response/bin/firewall-drop: {\"version\":1,\"origin\":{\"name\":\"node01\",\"module\":\"wazuh-execd\"},\"command\":\"add\",\"parameters\":{\"extra_args\":[],\"alert\":{\"timestamp\":\"2024-09-29T21:55:28.032+0700\",\"rule\":{\"level\":10,\"description\":\"IP address found in AlienVault reputation database.\",\"id\":\"100100\",\"firedtimes\":1,\"mail\":false,\"groups\":[\"attack\"]},\"agent\":{\"id\":\"001\",\"name\":\"wa_ubuntu\",\"ip\":\"192.168.11.5\"},\"manager\":{\"name\":\"ubuntu\"},\"id\":\"1727621728.184979\",\"full_log\":\"192.168.83.148 - - [29/Sep/2024:21:55:26 +0700] \\\"GET / HTTP/1.1\\\" 200 10926 \\\"-\\\" \\\"curl/8.5.0\\\"\",\"decoder\":{\"name\":\"web-accesslog\"},\"data\":{\"protocol\":\"GET\",\"srcip\":\"192.168.83.148\",\"id\":\"200\",\"url\":\"/\"},\"location\":\"/var/log/apache2/access.log\"},\"program\":\"active-response/bin/firewall-drop\"}}",
+    "input": {
+      "type": "log"
+    },
+    "@timestamp": "2024-09-29T14:55:30.045Z",
+    "location": "/var/ossec/logs/active-responses.log",
+    "id": "1727621730.185280",
+    "timestamp": "2024-09-29T21:55:30.045+0700"
+  },
+  "fields": {
+    "@timestamp": [
+      "2024-09-29T14:55:30.045Z"
+    ],
+    "timestamp": [
+      "2024-09-29T14:55:30.045Z"
+    ]
+  }
+}

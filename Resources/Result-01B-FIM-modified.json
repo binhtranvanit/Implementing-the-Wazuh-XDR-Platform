@@ -1,0 +1,117 @@
+{
+  "_index": "wazuh-alerts-4.x-2024.09.23",
+  "_id": "xHUwHZIBhsAhco6yjQaJ",
+  "_score": 1,
+  "_source": {
+    "syscheck": {
+      "size_before": "14",
+      "uname_after": "ubuntu",
+      "mtime_after": "2024-09-23T11:42:50",
+      "size_after": "18",
+      "gid_after": "1000",
+      "md5_before": "790be76a983412fb8a739ede17f0691f",
+      "diff": "1,2c1,2\n< Test A\n< Test B\n---\n> Test 123\n> Test ERT\n",
+      "sha256_before": "f871fd4f06bfc44d0c06d0f3777801a0f4e8c3a72dffb4e8c2e8a7f54d3676a8",
+      "mtime_before": "2024-09-23T11:39:54",
+      "mode": "realtime",
+      "path": "/home/ubuntu/bsoc/TestWazuh.txt",
+      "sha1_after": "fc96f9b4a531b03c376bc6e2cdc3341a52c41c63",
+      "changed_attributes": [
+        "size",
+        "mtime",
+        "md5",
+        "sha1",
+        "sha256"
+      ],
+      "gname_after": "ubuntu",
+      "uid_after": "1000",
+      "perm_after": "rw-rw-r--",
+      "event": "modified",
+      "md5_after": "457f1474b6adcb0eb836a2b99068bd8a",
+      "sha1_before": "4cd071ea82423808ed7627ce9679fd39cb0188a0",
+      "sha256_after": "1c5740d61f62cbadb09993a17c00a863b9e07adcecee390a548ad697f0fdf0f2",
+      "inode_after": 655618
+    },
+    "agent": {
+      "ip": "192.168.11.5",
+      "name": "wa_ubuntu",
+      "id": "001"
+    },
+    "manager": {
+      "name": "ubuntu"
+    },
+    "rule": {
+      "mail": false,
+      "level": 7,
+      "pci_dss": [
+        "11.5"
+      ],
+      "hipaa": [
+        "164.312.c.1",
+        "164.312.c.2"
+      ],
+      "tsc": [
+        "PI1.4",
+        "PI1.5",
+        "CC6.1",
+        "CC6.8",
+        "CC7.2",
+        "CC7.3"
+      ],
+      "description": "Integrity checksum changed.",
+      "groups": [
+        "ossec",
+        "syscheck",
+        "syscheck_entry_modified",
+        "syscheck_file"
+      ],
+      "nist_800_53": [
+        "SI.7"
+      ],
+      "gdpr": [
+        "II_5.1.f"
+      ],
+      "firedtimes": 2,
+      "mitre": {
+        "technique": [
+          "Stored Data Manipulation"
+        ],
+        "id": [
+          "T1565.001"
+        ],
+        "tactic": [
+          "Impact"
+        ]
+      },
+      "id": "550",
+      "gpg13": [
+        "4.11"
+      ]
+    },
+    "decoder": {
+      "name": "syscheck_integrity_changed"
+    },
+    "full_log": "File '/home/ubuntu/bsoc/TestWazuh.txt' modified\nMode: realtime\nChanged attributes: size,mtime,md5,sha1,sha256\nSize changed from '14' to '18'\nOld modification time was: '1727066394', now it is '1727066570'\nOld md5sum was: '790be76a983412fb8a739ede17f0691f'\nNew md5sum is : '457f1474b6adcb0eb836a2b99068bd8a'\nOld sha1sum was: '4cd071ea82423808ed7627ce9679fd39cb0188a0'\nNew sha1sum is : 'fc96f9b4a531b03c376bc6e2cdc3341a52c41c63'\nOld sha256sum was: 'f871fd4f06bfc44d0c06d0f3777801a0f4e8c3a72dffb4e8c2e8a7f54d3676a8'\nNew sha256sum is : '1c5740d61f62cbadb09993a17c00a863b9e07adcecee390a548ad697f0fdf0f2'\n",
+    "input": {
+      "type": "log"
+    },
+    "@timestamp": "2024-09-23T04:42:50.281Z",
+    "location": "syscheck",
+    "id": "1727066570.646570",
+    "timestamp": "2024-09-23T11:42:50.281+0700"
+  },
+  "fields": {
+    "syscheck.mtime_after": [
+      "2024-09-23T11:42:50.000Z"
+    ],
+    "syscheck.mtime_before": [
+      "2024-09-23T11:39:54.000Z"
+    ],
+    "@timestamp": [
+      "2024-09-23T04:42:50.281Z"
+    ],
+    "timestamp": [
+      "2024-09-23T04:42:50.281Z"
+    ]
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "_index": "wazuh-alerts-4.x-2024.09.26",
+  "_id": "aG59LJIBnR9KWRUyms8K",
+  "_score": 1,
+  "_source": {
+    "predecoder": {
+      "hostname": "ubuntu",
+      "program_name": "sudo",
+      "timestamp": "Sep 26 04:01:17"
+    },
+    "agent": {
+      "ip": "192.168.11.5",
+      "name": "wa_ubuntu",
+      "id": "001"
+    },
+    "manager": {
+      "name": "ubuntu"
+    },
+    "data": {
+      "uid": "1001",
+      "dstuser": "root(uid=0)"
+    },
+    "rule": {
+      "mail": false,
+      "level": 3,
+      "pci_dss": [
+        "10.2.5"
+      ],
+      "hipaa": [
+        "164.312.b"
+      ],
+      "tsc": [
+        "CC6.8",
+        "CC7.2",
+        "CC7.3"
+      ],
+      "description": "PAM: Login session opened.",
+      "groups": [
+        "pam",
+        "syslog",
+        "authentication_success"
+      ],
+      "nist_800_53": [
+        "AU.14",
+        "AC.7"
+      ],
+      "gdpr": [
+        "IV_32.2"
+      ],
+      "firedtimes": 1,
+      "mitre": {
+        "technique": [
+          "Valid Accounts"
+        ],
+        "id": [
+          "T1078"
+        ],
+        "tactic": [
+          "Defense Evasion",
+          "Persistence",
+          "Privilege Escalation",
+          "Initial Access"
+        ]
+      },
+      "id": "5501",
+      "gpg13": [
+        "7.8",
+        "7.9"
+      ]
+    },
+    "decoder": {
+      "parent": "pam",
+      "name": "pam"
+    },
+    "full_log": "Sep 26 04:01:17 ubuntu sudo[45625]: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1001)",
+    "input": {
+      "type": "log"
+    },
+    "@timestamp": "2024-09-26T04:01:18.673Z",
+    "location": "journald",
+    "id": "1727323278.206883",
+    "timestamp": "2024-09-26T11:01:18.673+0700"
+  },
+  "fields": {
+    "@timestamp": [
+      "2024-09-26T04:01:18.673Z"
+    ],
+    "timestamp": [
+      "2024-09-26T04:01:18.673Z"
+    ]
+  }
+}

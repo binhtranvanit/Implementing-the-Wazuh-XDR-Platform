@@ -1,0 +1,85 @@
+{
+  "_index": "wazuh-alerts-4.x-2024.09.27",
+  "_id": "rjT-MJIB3ydFtSlhMdk-",
+  "_score": 1,
+  "_source": {
+    "agent": {
+      "ip": "192.168.11.5",
+      "name": "wa_ubuntu",
+      "id": "001"
+    },
+    "manager": {
+      "name": "ubuntu"
+    },
+    "data": {
+      "protocol": "GET",
+      "srcip": "192.168.83.148",
+      "id": "404",
+      "url": "/users/?id=SELECT+*+FROM+users"
+    },
+    "rule": {
+      "firedtimes": 1,
+      "mail": false,
+      "level": 7,
+      "pci_dss": [
+        "6.5",
+        "11.4",
+        "6.5.1"
+      ],
+      "tsc": [
+        "CC6.6",
+        "CC7.1",
+        "CC8.1",
+        "CC6.1",
+        "CC6.8",
+        "CC7.2",
+        "CC7.3"
+      ],
+      "description": "SQL injection attempt.",
+      "groups": [
+        "web",
+        "accesslog",
+        "attack",
+        "sql_injection"
+      ],
+      "mitre": {
+        "technique": [
+          "Exploit Public-Facing Application"
+        ],
+        "id": [
+          "T1190"
+        ],
+        "tactic": [
+          "Initial Access"
+        ]
+      },
+      "id": "31103",
+      "nist_800_53": [
+        "SA.11",
+        "SI.4"
+      ],
+      "gdpr": [
+        "IV_35.7.d"
+      ]
+    },
+    "decoder": {
+      "name": "web-accesslog"
+    },
+    "full_log": "192.168.83.148 - - [27/Sep/2024:08:00:08 +0700] \"GET /users/?id=SELECT+*+FROM+users HTTP/1.1\" 404 435 \"-\" \"curl/8.5.0\"",
+    "input": {
+      "type": "log"
+    },
+    "@timestamp": "2024-09-27T01:00:10.134Z",
+    "location": "/var/log/apache2/access.log",
+    "id": "1727398810.5466959",
+    "timestamp": "2024-09-27T08:00:10.134+0700"
+  },
+  "fields": {
+    "@timestamp": [
+      "2024-09-27T01:00:10.134Z"
+    ],
+    "timestamp": [
+      "2024-09-27T01:00:10.134Z"
+    ]
+  }
+}

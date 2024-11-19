@@ -1,0 +1,128 @@
+{
+  "_index": "wazuh-alerts-4.x-2024.09.27",
+  "_id": "ZDTeMJIB3ydFtSlhUNmu",
+  "_score": null,
+  "_source": {
+    "input": {
+      "type": "log"
+    },
+    "agent": {
+      "ip": "192.168.11.5",
+      "name": "wa_ubuntu",
+      "id": "001"
+    },
+    "manager": {
+      "name": "ubuntu"
+    },
+    "data": {
+      "srcip": "192.168.83.148",
+      "dstuser": "ubuntu",
+      "origin": {
+        "module": "wazuh-execd",
+        "name": "node01"
+      },
+      "version": "1",
+      "parameters": {
+        "alert": {
+          "predecoder": {
+            "hostname": "ubuntu",
+            "program_name": "sshd",
+            "timestamp": "Sep 27 00:23:43"
+          },
+          "agent": {
+            "ip": "192.168.11.5",
+            "name": "wa_ubuntu",
+            "id": "001"
+          },
+          "previous_output": "Sep 27 00:23:43 ubuntu sshd[4683]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.83.148  user=ubuntu\nSep 27 00:23:43 ubuntu sshd[4685]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.83.148  user=ubuntu",
+          "manager": {
+            "name": "ubuntu"
+          },
+          "data": {
+            "uid": "0",
+            "srcip": "192.168.83.148",
+            "euid": "0",
+            "dstuser": "ubuntu",
+            "tty": "ssh"
+          },
+          "rule": {
+            "firedtimes": "1",
+            "mail": "false",
+            "level": "10",
+            "description": "Possible password guess on ubuntu: 3 failed logins in a short period of time",
+            "groups": [
+              "pam",
+              "syslog"
+            ],
+            "mitre": {
+              "technique": [
+                "Brute Force"
+              ],
+              "id": [
+                "T1110"
+              ],
+              "tactic": [
+                "Credential Access"
+              ]
+            },
+            "id": "120100",
+            "frequency": "3"
+          },
+          "location": "journald",
+          "id": "1727396625.5417695",
+          "decoder": {
+            "name": "pam"
+          },
+          "timestamp": "2024-09-27T07:23:45.799+0700",
+          "full_log": "Sep 27 00:23:43 ubuntu sshd[4686]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.83.148  user=ubuntu"
+        },
+        "extra_args": [],
+        "program": "active-response/bin/disable-account"
+      },
+      "command": "delete"
+    },
+    "rule": {
+      "firedtimes": 2,
+      "mail": false,
+      "level": 3,
+      "pci_dss": [
+        "11.4"
+      ],
+      "tsc": [
+        "CC6.1",
+        "CC6.8",
+        "CC7.2",
+        "CC7.3",
+        "CC7.4"
+      ],
+      "description": "Active response: active-response/bin/disable-account - delete",
+      "groups": [
+        "ossec",
+        "active_response"
+      ],
+      "id": "657",
+      "nist_800_53": [
+        "SI.4"
+      ],
+      "gdpr": [
+        "IV_35.7.d"
+      ]
+    },
+    "location": "/var/ossec/logs/active-responses.log",
+    "decoder": {
+      "parent": "ar_log_json",
+      "name": "ar_log_json"
+    },
+    "id": "1727396717.5432624",
+    "full_log": "2024/09/27 07:25:16 active-response/bin/disable-account: {\"version\":1,\"origin\":{\"name\":\"node01\",\"module\":\"wazuh-execd\"},\"command\":\"delete\",\"parameters\":{\"extra_args\":[],\"alert\":{\"timestamp\":\"2024-09-27T07:23:45.799+0700\",\"rule\":{\"level\":10,\"description\":\"Possible password guess on ubuntu: 3 failed logins in a short period of time\",\"id\":\"120100\",\"mitre\":{\"id\":[\"T1110\"],\"tactic\":[\"Credential Access\"],\"technique\":[\"Brute Force\"]},\"frequency\":3,\"firedtimes\":1,\"mail\":false,\"groups\":[\"pam\",\"syslog\"]},\"agent\":{\"id\":\"001\",\"name\":\"wa_ubuntu\",\"ip\":\"192.168.11.5\"},\"manager\":{\"name\":\"ubuntu\"},\"id\":\"1727396625.5417695\",\"previous_output\":\"Sep 27 00:23:43 ubuntu sshd[4683]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.83.148  user=ubuntu\\nSep 27 00:23:43 ubuntu sshd[4685]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.83.148  user=ubuntu\",\"full_log\":\"Sep 27 00:23:43 ubuntu sshd[4686]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.83.148  user=ubuntu\",\"predecoder\":{\"program_name\":\"sshd\",\"timestamp\":\"Sep 27 00:23:43\",\"hostname\":\"ubuntu\"},\"decoder\":{\"name\":\"pam\"},\"data\":{\"srcip\":\"192.168.83.148\",\"dstuser\":\"ubuntu\",\"uid\":\"0\",\"euid\":\"0\",\"tty\":\"ssh\"},\"location\":\"journald\"},\"program\":\"active-response/bin/disable-account\"}}",
+    "timestamp": "2024-09-27T07:25:17.853+0700"
+  },
+  "fields": {
+    "timestamp": [
+      "2024-09-27T00:25:17.853Z"
+    ]
+  },
+  "sort": [
+    1727396717853
+  ]
+}

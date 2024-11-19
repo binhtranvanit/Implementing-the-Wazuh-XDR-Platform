@@ -1,0 +1,175 @@
+{
+  "_index": "wazuh-alerts-4.x-2024.09.23",
+  "_id": "P3XXHJIBhsAhco6yAgYd",
+  "_score": 1,
+  "_source": {
+    "syscheck": {
+      "mode": "realtime",
+      "path": "c:\\users\\user\\bsoc\\test-wazuh\\wazuh-test.txt",
+      "sha1_after": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+      "uname_after": "user",
+      "mtime_after": "2024-09-23T10:04:57",
+      "attrs_after": [
+        "ARCHIVE"
+      ],
+      "size_after": "0",
+      "uid_after": "S-1-5-21-4018185793-1848231848-775784978-1001",
+      "win_perm_after": [
+        {
+          "allowed": [
+            "DELETE",
+            "READ_CONTROL",
+            "WRITE_DAC",
+            "WRITE_OWNER",
+            "SYNCHRONIZE",
+            "READ_DATA",
+            "WRITE_DATA",
+            "APPEND_DATA",
+            "READ_EA",
+            "WRITE_EA",
+            "EXECUTE",
+            "READ_ATTRIBUTES",
+            "WRITE_ATTRIBUTES",
+            [
+              "DELETE",
+              "READ_CONTROL",
+              "WRITE_DAC",
+              "WRITE_OWNER",
+              "SYNCHRONIZE",
+              "READ_DATA",
+              "WRITE_DATA",
+              "APPEND_DATA",
+              "READ_EA",
+              "WRITE_EA",
+              "EXECUTE",
+              "READ_ATTRIBUTES",
+              "WRITE_ATTRIBUTES"
+            ],
+            [
+              "DELETE",
+              "READ_CONTROL",
+              "WRITE_DAC",
+              "WRITE_OWNER",
+              "SYNCHRONIZE",
+              "READ_DATA",
+              "WRITE_DATA",
+              "APPEND_DATA",
+              "READ_EA",
+              "WRITE_EA",
+              "EXECUTE",
+              "READ_ATTRIBUTES",
+              "WRITE_ATTRIBUTES"
+            ]
+          ],
+          "name": "SYSTEM"
+        },
+        {
+          "allowed": [
+            "DELETE",
+            "READ_CONTROL",
+            "WRITE_DAC",
+            "WRITE_OWNER",
+            "SYNCHRONIZE",
+            "READ_DATA",
+            "WRITE_DATA",
+            "APPEND_DATA",
+            "READ_EA",
+            "WRITE_EA",
+            "EXECUTE",
+            "READ_ATTRIBUTES",
+            "WRITE_ATTRIBUTES"
+          ],
+          "name": "Administrators"
+        },
+        {
+          "allowed": [
+            "DELETE",
+            "READ_CONTROL",
+            "WRITE_DAC",
+            "WRITE_OWNER",
+            "SYNCHRONIZE",
+            "READ_DATA",
+            "WRITE_DATA",
+            "APPEND_DATA",
+            "READ_EA",
+            "WRITE_EA",
+            "EXECUTE",
+            "READ_ATTRIBUTES",
+            "WRITE_ATTRIBUTES"
+          ],
+          "name": "user"
+        }
+      ],
+      "event": "added",
+      "md5_after": "d41d8cd98f00b204e9800998ecf8427e",
+      "sha256_after": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "agent": {
+      "ip": "192.168.13.5",
+      "name": "wa_windows",
+      "id": "002"
+    },
+    "manager": {
+      "name": "ubuntu"
+    },
+    "rule": {
+      "firedtimes": 2,
+      "mail": false,
+      "level": 5,
+      "pci_dss": [
+        "11.5"
+      ],
+      "hipaa": [
+        "164.312.c.1",
+        "164.312.c.2"
+      ],
+      "tsc": [
+        "PI1.4",
+        "PI1.5",
+        "CC6.1",
+        "CC6.8",
+        "CC7.2",
+        "CC7.3"
+      ],
+      "description": "File added to the system.",
+      "groups": [
+        "ossec",
+        "syscheck",
+        "syscheck_entry_added",
+        "syscheck_file"
+      ],
+      "id": "554",
+      "nist_800_53": [
+        "SI.7"
+      ],
+      "gpg13": [
+        "4.11"
+      ],
+      "gdpr": [
+        "II_5.1.f"
+      ]
+    },
+    "decoder": {
+      "name": "syscheck_new_entry"
+    },
+    "full_log": "File 'c:\\users\\user\\bsoc\\test-wazuh\\wazuh-test.txt' added\nMode: realtime\n",
+    "input": {
+      "type": "log"
+    },
+    "@timestamp": "2024-09-23T03:05:04.334Z",
+    "location": "syscheck",
+    "id": "1727060704.502906",
+    "timestamp": "2024-09-23T10:05:04.334+0700"
+  },
+  "fields": {
+    "syscheck.mtime_after": [
+      "2024-09-23T10:04:57.000Z"
+    ],
+    "@timestamp": [
+      "2024-09-23T03:05:04.334Z"
+    ],
+    "timestamp": [
+      "2024-09-23T03:05:04.334Z"
+    ]
+  }
+}

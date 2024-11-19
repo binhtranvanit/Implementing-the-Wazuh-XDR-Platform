@@ -1,0 +1,82 @@
+{
+  "_index": "wazuh-alerts-4.x-2024.09.27",
+  "_id": "gjTyMJIB3ydFtSlhOtlp",
+  "_score": 1,
+  "_source": {
+    "agent": {
+      "ip": "192.168.11.5",
+      "name": "wa_ubuntu",
+      "id": "001"
+    },
+    "manager": {
+      "name": "ubuntu"
+    },
+    "data": {
+      "protocol": "GET",
+      "srcip": "192.168.83.148",
+      "id": "200",
+      "url": "/"
+    },
+    "rule": {
+      "firedtimes": 1,
+      "mail": true,
+      "level": 15,
+      "pci_dss": [
+        "11.4"
+      ],
+      "tsc": [
+        "CC6.1",
+        "CC6.8",
+        "CC7.2",
+        "CC7.3"
+      ],
+      "description": "Shellshock attack detected",
+      "groups": [
+        "web",
+        "accesslog",
+        "attack"
+      ],
+      "mitre": {
+        "technique": [
+          "Exploitation for Privilege Escalation",
+          "Exploit Public-Facing Application"
+        ],
+        "id": [
+          "T1068",
+          "T1190"
+        ],
+        "tactic": [
+          "Privilege Escalation",
+          "Initial Access"
+        ]
+      },
+      "id": "31168",
+      "nist_800_53": [
+        "SI.4"
+      ],
+      "info": "CVE-2014-6271https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-6271",
+      "gdpr": [
+        "IV_35.7.d"
+      ]
+    },
+    "decoder": {
+      "name": "web-accesslog"
+    },
+    "full_log": "192.168.83.148 - - [27/Sep/2024:07:47:08 +0700] \"GET / HTTP/1.1\" 200 10926 \"-\" \"() { :; }; /bin/cat /etc/passwd\"",
+    "input": {
+      "type": "log"
+    },
+    "@timestamp": "2024-09-27T00:47:09.876Z",
+    "location": "/var/log/apache2/access.log",
+    "id": "1727398029.5447586",
+    "timestamp": "2024-09-27T07:47:09.876+0700"
+  },
+  "fields": {
+    "@timestamp": [
+      "2024-09-27T00:47:09.876Z"
+    ],
+    "timestamp": [
+      "2024-09-27T00:47:09.876Z"
+    ]
+  }
+}

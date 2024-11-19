@@ -1,0 +1,50 @@
+{
+  "_index": "wazuh-alerts-4.x-2024.09.29",
+  "_id": "QBFHPpIBjb5RHBuWm2Gq",
+  "_score": 1,
+  "_source": {
+    "agent": {
+      "ip": "192.168.11.5",
+      "name": "wa_ubuntu",
+      "id": "001"
+    },
+    "manager": {
+      "name": "ubuntu"
+    },
+    "data": {
+      "protocol": "GET",
+      "srcip": "192.168.83.148",
+      "id": "200",
+      "url": "/"
+    },
+    "rule": {
+      "firedtimes": 1,
+      "mail": false,
+      "level": 10,
+      "description": "IP address found in AlienVault reputation database.",
+      "groups": [
+        "attack"
+      ],
+      "id": "100100"
+    },
+    "decoder": {
+      "name": "web-accesslog"
+    },
+    "full_log": "192.168.83.148 - - [29/Sep/2024:21:55:26 +0700] \"GET / HTTP/1.1\" 200 10926 \"-\" \"curl/8.5.0\"",
+    "input": {
+      "type": "log"
+    },
+    "@timestamp": "2024-09-29T14:55:28.032Z",
+    "location": "/var/log/apache2/access.log",
+    "id": "1727621728.184979",
+    "timestamp": "2024-09-29T21:55:28.032+0700"
+  },
+  "fields": {
+    "@timestamp": [
+      "2024-09-29T14:55:28.032Z"
+    ],
+    "timestamp": [
+      "2024-09-29T14:55:28.032Z"
+    ]
+  }
+}
